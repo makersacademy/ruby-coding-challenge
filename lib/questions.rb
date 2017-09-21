@@ -47,3 +47,50 @@ end
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
 end
+
+
+# get the domain name *without* the .com part, from an email address
+# so onboarding@makersacademy.com becomes makersacademy
+def get_domain_name_from_email_address(email)
+end
+
+# capitalize the first letter in each word of a string,
+#  except 'a', 'and' and 'the'
+# *unless* they come at the start of the start of the string, e.g.
+# 'the lion the witch and the wardrobe' becomes
+# 'The Lion the Witch and the Wardrobe'
+def titleize_a_string(string)
+end
+
+# return true if a string contains any special characters
+# where 'special character' means anything apart from the letters
+# a-z (uppercase and lower) or numbers
+def check_a_string_for_special_characters(string)
+end
+
+# keep only the elements that start with a vowel
+def select_elements_starting_with_vowel(array)
+end
+
+
+# remove instances of nil (but NOT false) from an array
+def remove_nils_from_array(array)
+end
+
+# remove instances of nil AND false from an array
+def remove_nils_and_false_from_array(array)
+end
+
+# don't reverse the array, but reverse every word inside it. e.g.
+# ['dog', 'monkey'] becomes ['god', 'yeknom']
+def reverse_every_element_in_array(array)
+end
+
+# discard the first 3 elements of an array,
+# e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
+def all_elements_except_first_3(array)
+end
+
+# add an element to the beginning of an array
+def add_element_to_beginning_of_array(array, element)
+end
