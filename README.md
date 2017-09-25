@@ -10,6 +10,23 @@ You should be able to answer most questions with a couple of lines of code, and 
 
 If you're writing a long, complex solution, there's probably a better way.
 
+## Getting started
+
+Our recommended guide to starting this project:
+============
+
+* Fork this repo to your own Github
+* Clone it down to your local machine
+* Run `bundle install` (you may need an extra something to get this working ... )
+* Answer the first question (in the challenge section)
+* Make a commit the answer and push it up to your repo
+* **Send a pull request straight away** (yes - after your first answer)
+* Answer the second question (in the challenge section)
+* Commit the answer and push it up to your repo
+* and repeat to get into the habit of learning both Ruby and Version Control
+
+... the PR will automatically update itself!
+
 To run the specs, just run
 
 ~~~
