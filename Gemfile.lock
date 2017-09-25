@@ -29,6 +29,3 @@ PLATFORMS
 DEPENDENCIES
   pry
   rspec
-
-BUNDLED WITH
-   1.15.4
