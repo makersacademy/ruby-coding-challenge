@@ -1,11 +1,13 @@
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+    -number.abs
 end
 
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+    float.ceil
 end
 
 # round down a float up and convert it to an Integer,
