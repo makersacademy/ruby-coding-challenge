@@ -1,4 +1,4 @@
-
+rvm: '2.4.0'
 language: ruby
 script:
   rspec --no-fail-fast
