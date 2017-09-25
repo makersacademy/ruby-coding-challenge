@@ -12,7 +12,7 @@ If you're writing a long, complex solution, there's probably a better way.
 
 ## Getting started
 
-Our recommended guide to starting this project:
+### Our recommended guide to starting this project:
 ============
 
 * Fork this repo to your own Github
