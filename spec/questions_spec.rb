@@ -3,14 +3,6 @@ require 'questions'
 
 describe 'learning numbers :' do
 
-  it 'make_numbers_negative' do
-    a = make_numbers_negative 5
-    b = make_numbers_negative -7
-
-    expect(a).to eq -5
-    expect(b).to eq -7
-  end
-
   it 'round_up_number' do
     n = round_up_number 3.142
     expect(n).to eq 4
@@ -19,6 +11,14 @@ describe 'learning numbers :' do
   it 'round_down_number' do
     n = round_down_number 4.9
     expect(n).to eq 4
+  end
+
+  it 'make_numbers_negative' do
+    a = make_numbers_negative 5
+    b = make_numbers_negative -7
+
+    expect(a).to eq -5
+    expect(b).to eq -7
   end
 
 end
