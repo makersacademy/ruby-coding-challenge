@@ -1,6 +1,8 @@
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+  return -number if number >0
+  number
 end
 
 # round up a float up and convert it to an Integer,
