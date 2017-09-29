@@ -12,22 +12,25 @@ If you're writing a long, complex solution, there's probably a better way.
 
 ## Getting started
 
-### Our recommended guide to starting this project:
+### Our recommended guide to acing this challenge :
 ============
-
 * Fork this repo to your own Github
-* Clone it down to your local machine
-* Run `bundle install` (you may need an extra something to get this working ... )
+* Create an account online at [c9.io](https://c9.io)
+* Create a workspace and add your forked repo
+* Run `bundle install` in the terminal area
 * Answer the first question (in the challenge section)
-* Make a commit the answer and push it up to your repo
+* Commit the answer and push it up
+  * At this stage you should see the changes in your Github
 * **Send a pull request straight away** (yes - after your first answer)
 * Answer the second question (in the challenge section)
 * Commit the answer and push it up to your repo
 * and repeat to get into the habit of learning both Ruby and Version Control
 
-... the PR will automatically update itself!
+... the pull request will automatically update itself!
 
-To run the specs, just run
+### How to check your progress
+
+We've written a bunch of tests to help you answer the code. To check your progress as you code along, use this command in your terminal:
 
 ~~~
 $ rspec questions_spec.rb
