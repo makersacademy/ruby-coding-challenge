@@ -14,13 +14,17 @@ If you're writing a long, complex solution, there's probably a better way.
 
 ### Our recommended guide to acing this challenge :
 ============
-* Fork this repo to your own Github
+* [Fork](insert link to forking) this repo to your own Github
 * Create an account online at [c9.io](https://c9.io)
 * Create a workspace and add your forked repo
 * Run `bundle install` in the terminal area
 * Answer the first question (in the challenge section)
-* Commit the answer and push it up
-  * At this stage you should see the changes in your Github
+* Commit the answer and then follow these steps to commit your code
+  * $ `git status`
+  * $ `git add .`
+  * $ `git commit -m "Insert a message"`
+  * $ `git push origin master`
+  * At this stage you should see the changes in your own Github account
 * **Send a pull request straight away** (yes - after your first answer)
 * Answer the second question (in the challenge section)
 * Commit the answer and push it up to your repo
