@@ -117,6 +117,7 @@ end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
+  [element, array].flatten
 end
 
 # return the shortest word in an array
