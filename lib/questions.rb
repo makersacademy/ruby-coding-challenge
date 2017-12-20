@@ -55,13 +55,14 @@ end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
-  
+  symbol.to_s
 end
 
 
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  
 end
 
 # capitalize the first letter in each word of a string,
