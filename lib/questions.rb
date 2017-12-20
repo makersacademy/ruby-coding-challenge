@@ -10,7 +10,6 @@ def round_down_number(float)
   float.floor
 end
 
-
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
@@ -38,26 +37,23 @@ def convert_array_to_a_hash(array)
   array.each_slice(2).to_h
 end
 
-
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
-  string.gsub(/[A-Z]/, "")
+  string.gsub(/[A-Z]/, '')
 end
-
 
 # cut strings in half, and return the first half, e.g.
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
-  string[0, (string.length + 1)/2]
+  string[0, (string.length + 1) / 2]
 end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
   symbol.to_s
 end
-
 
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
@@ -71,7 +67,7 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-  a = ['a', 'and', 'the']
+  a = %w[a and the]
   string.capitalize.split.map { |x| a.include?(x) ? x : x.capitalize }.join(' ')
 end
 
@@ -89,9 +85,8 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-  array.select { |x| !!x[0].match(/[aeiou]/) }
+  array.select { |x| x[0].match(/[aeiou]/) }
 end
-
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
@@ -100,7 +95,7 @@ end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
-  array.compact.keep_if{ |x| x }
+  array.compact.keep_if { |x| x }
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
@@ -163,7 +158,7 @@ end
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
-  date.strftime("%d/%m/%Y")
+  date.strftime('%d/%m/%Y')
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
@@ -188,17 +183,17 @@ end
 # call an arbitrary method from a string. so if I
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
-def call_method_from_string(str_method)
-  self.str_method
+def call_method_from_string(_str_method)
+  str_method
 end
 
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2014_bank_holiday?(date)
-  bank_holidays = ["2014/12/26", "2014/12/25", "2014/08/25", "2014/05/26",
-                   "2014/05/05", "2014/04/21", "2014/04/18", "2014/01/01"]
-  bank_holidays.include?(date.strftime("%Y/%m/%d"))
+  bank_holidays = ['2014/12/26', '2014/12/25', '2014/08/25', '2014/05/26',
+                   '2014/05/05', '2014/04/21', '2014/04/18', '2014/01/01']
+  bank_holidays.include?(date.strftime('%Y/%m/%d'))
 end
 
 # given your birthday this year, this method tells you
@@ -206,10 +201,8 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
-  until birthday.friday? do
-     birthday += 30758400
-   end
-   birthday.year
+  birthday += 30_758_400 until birthday.friday?
+  birthday.year
 end
 
 # count the number of words in a file
@@ -217,12 +210,11 @@ def word_count_a_file(file_path)
   IO.read(file_path).split(' ').count
 end
 
-
 # in a file, total the number of times words of different lengths
 # appear. So in a file with the text "the cat sat on the blue mat"
 # I have 5 words which are 3 letters long, 1 which is 2 letters long
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
-  IO.read(file_path).gsub(/[^a-zA-Z ]/, "").split.map{ |x| x.size }.each_with_object(Hash.new(0)) { |letter, hash| hash[letter] += 1}
+  IO.read(file_path).gsub(/[^a-zA-Z ]/, '').split.map(&:size).each_with_object(Hash.new(0)) { |letter, hash| hash[letter] += 1 }
 end
