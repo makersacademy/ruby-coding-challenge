@@ -122,12 +122,12 @@ end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
-  array.sort_by(&:size)[0]
+  array.min_by(&:size)
 end
 
 # return the shortest word in an array
 def longest_word_in_array(array)
-  array.sort_by(&:size)[-1]
+  array.max_by(&:size)
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
