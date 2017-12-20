@@ -67,8 +67,10 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-  string.capitalize.split
-        .map { |x| %w[a and the].include?(x) ? x : x.capitalize }.join(' ')
+  string.capitalize
+        .split
+        .map { |x| %w[a and the].include?(x) ? x : x.capitalize }
+        .join(' ')
 end
 
 # return true if a string contains any special characters
@@ -95,7 +97,7 @@ end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
-  array.compact.keep_if { |x| x }
+  array.keep_if { |x| x }
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
@@ -112,7 +114,7 @@ end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
-  [element, array].flatten
+  [element] + array
 end
 
 # return the shortest word in an array
@@ -216,6 +218,9 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file)
-  IO.read(file).gsub(/[^a-zA-Z ]/, '').split.map(&:size)
+  IO.read(file)
+    .gsub(/[^a-zA-Z ]/, '')
+    .split
+    .map(&:size)
     .each_with_object(Hash.new(0)) { |a, b| b[a] += 1 }
 end
