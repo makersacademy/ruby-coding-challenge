@@ -13,7 +13,7 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
-  number > 0 ? number * -1 : number
+  number > 0 ? -number : number
 end
 
 # swap the keys and values in a hash. e.g.
@@ -67,8 +67,8 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-  a = %w[a and the]
-  string.capitalize.split.map { |x| a.include?(x) ? x : x.capitalize }.join(' ')
+  string.capitalize.split
+        .map { |x| %w[a and the].include?(x) ? x : x.capitalize }.join(' ')
 end
 
 # return true if a string contains any special characters
@@ -207,7 +207,7 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
-  IO.read(file_path).split(' ').count
+  IO.read(file_path).split.count
 end
 
 # in a file, total the number of times words of different lengths
@@ -215,6 +215,7 @@ end
 # I have 5 words which are 3 letters long, 1 which is 2 letters long
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
-def count_words_of_each_length_in_a_file(file_path)
-  IO.read(file_path).gsub(/[^a-zA-Z ]/, '').split.map(&:size).each_with_object(Hash.new(0)) { |letter, hash| hash[letter] += 1 }
+def count_words_of_each_length_in_a_file(file)
+  IO.read(file).gsub(/[^a-zA-Z ]/, '').split.map(&:size)
+    .each_with_object(Hash.new(0)) { |a, b| b[a] += 1 }
 end
