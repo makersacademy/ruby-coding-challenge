@@ -77,7 +77,7 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
-  !!string.match(/[^a-zA-Z0-9]/)
+  !!string.match(/[^a-zA-Z0-9 ]/)
 end
 
 # keep only the elements that start with an a
@@ -185,8 +185,8 @@ end
 # call an arbitrary method from a string. so if I
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
-def call_method_from_string(_str_method)
-  str_method
+def call_method_from_string(str_method)
+  eval(str_method)
 end
 
 # return true if the date is a uk bank holiday for 2014
