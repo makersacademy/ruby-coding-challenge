@@ -174,17 +174,17 @@ describe 'bonus questions' do
      expect(a).to eq [0, 0, 0, 0, 0]
   end
 
-  it 'is_a_2014_bank_holiday?' do
-    a = is_a_2014_bank_holiday?(Time.new(2014, 8, 25))
-    b = is_a_2014_bank_holiday?(Time.new(2014, 8, 26))
+  it 'is_a_2018_bank_holiday?' do
+    a = is_a_2018_bank_holiday?(Time.new(2018, 8, 27))
+    b = is_a_2018_bank_holiday?(Time.new(2018, 8, 26))
 
     expect(a).to be true
     expect(b).to be false
   end
 
   it 'your_birthday_is_on_a_friday_in_the_year' do
-    n = your_birthday_is_on_a_friday_in_the_year(Time.new(2013, 1, 1))
-    expect(n).to eq 2016
+    n = your_birthday_is_on_a_friday_in_the_year(Time.new(2018, 1, 1))
+    expect(n).to eq 2020
   end
 
   it 'word_count_a_file' do

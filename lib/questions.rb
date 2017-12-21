@@ -189,20 +189,19 @@ def call_method_from_string(str_method)
   eval(str_method)
 end
 
-# return true if the date is a uk bank holiday for 2014
+# return true if the date is a uk bank holiday for 2018
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
-def is_a_2014_bank_holiday?(date)
+def is_a_2018_bank_holiday?(date)
   date = date.strftime('%Y/%m/%d')
-  bank_holidays = %w[2014/12/26 2014/12/25 2014/08/25 2014/05/26
-                     2014/05/05 2014/04/21 2014/04/18 2014/01/01]
+  bank_holidays = %w[2018/12/26 2018/12/25 2018/08/27 2018/05/28
+                     2018/05/07 2018/04/02 2018/03/30 2018/01/01]
   bank_holidays.include?(date)
 end
 
 # given your birthday this year, this method tells you
 # the next year when your birthday will fall on a friday
-# e.g. january 1st, will next be a friday in 2016
-# return the day as a capitalized string like 'Friday'
+# e.g. january 1st, will next be a friday in 2020
 def your_birthday_is_on_a_friday_in_the_year(birthday)
   birthday += 30_758_400 until birthday.friday?
   birthday.year
