@@ -170,7 +170,8 @@ describe 'bonus questions' do
   end
 
   it 'call_method_from_string' do
-    expect { call_method_from_string('foobar') }.to raise_error(NameError)
+     a = call_method_from_string('Array.new(5, 0)')
+     expect(a).to eq [0, 0, 0, 0, 0]
   end
 
   it 'is_a_2014_bank_holiday?' do
