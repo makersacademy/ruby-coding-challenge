@@ -33,7 +33,8 @@ describe 'learning hashes' do
   end
 
   it 'add_together_keys_and_values' do
-    n = add_together_keys_and_values({ 1 => 1, 2 => 2 })
+    h = { 1 => 1, 2 => 2 }
+    n = add_together_keys_and_values(h)
     expect(n).to eq 6
   end
 
