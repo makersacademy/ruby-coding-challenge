@@ -16,7 +16,7 @@ describe 'learning numbers :' do
 
   it 'make_numbers_negative' do
     a = make_numbers_negative 5
-    b = make_numbers_negative(7)
+    b = make_numbers_negative(-7)
 
     expect(a).to eq (-5)
     expect(b).to eq (-7)
