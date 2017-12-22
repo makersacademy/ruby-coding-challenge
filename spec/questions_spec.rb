@@ -39,7 +39,8 @@ describe 'learning hashes' do
   end
 
   it 'convert_array_to_a_hash' do
-    n = convert_array_to_a_hash ['a', 'b', 'c', 'd']
+    h = ['a', 'b', 'c', 'd']
+    n = convert_array_to_a_hash(h) 
     expect(n).to eq({ 'a' => 'b', 'c' => 'd' })
   end
 
