@@ -27,7 +27,8 @@ end
 describe 'learning hashes' do
 
   it 'swap_keys_and_values_in_a_hash' do
-    n = swap_keys_and_values_in_a_hash({ 'a' => 'b', 'c' => 'd' })
+    h = { 'a' => 'b', 'c' => 'd' }
+    n = swap_keys_and_values_in_a_hash(h)
     expect(n).to eq({ 'b' => 'a', 'd' => 'c' })
   end
 
