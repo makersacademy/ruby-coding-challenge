@@ -158,6 +158,8 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+  index_no = array.index{ |num| num > 5}
+  array[0...index_no]
 end
 
 # get all the letters used in an array of words and return
