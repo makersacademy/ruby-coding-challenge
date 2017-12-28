@@ -94,6 +94,7 @@ end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+    array.select{|x| x =~ /^A/i}
 end
 
 # keep only the elements that start with a vowel
