@@ -87,6 +87,9 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+    special = "?<>',?[]}{=-)(*&^%$#`~{}!@"
+    regex = /[#{special.gsub(/./){|char| "\\#{char}"}}]/
+    string =~ regex ? true : false
 end
 
 # keep only the elements that start with an a
