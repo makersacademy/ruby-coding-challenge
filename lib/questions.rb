@@ -142,6 +142,7 @@ end
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+    array.sum
 end
 
 # get the average from an array, rounded to the nearest integer
