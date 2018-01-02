@@ -237,6 +237,8 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+  File.read(file_path).split(' ').length
+  # had to create the file, text taken from https://www.lipsum.com/feed/html
 end
 
 
