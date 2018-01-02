@@ -218,7 +218,7 @@ def is_a_2014_bank_holiday?(date)
   01/01/14)
 
   bh_dates.include?(date.strftime("%d/%m/%y"))
-  
+
 end
 
 # given your birthday this year, this method tells you
@@ -226,6 +226,13 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+  while birthday.friday? == false
+    birthday += (60 * 60 * 24 * 365)
+  end
+    birthday.year
+    # rspec was after a year, but the question was asking for a day
+    # not the clearest of questions. Should state "someones" bday, not
+    # the users
 end
 
 # count the number of words in a file
