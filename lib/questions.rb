@@ -248,4 +248,9 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+  string = File.read(file_path).gsub(/[^a-zA-Z ]/,"")
+  array = string.split(' ')
+  grouped = array.map{ |word| word.length }.group_by{ |n| n }
+  grouped.map{ |n, amount| [ n, amount.length ]}.sort.to_h
+  # text for data/lorem.txt updated/taken from anthony-crisp pull request
 end
