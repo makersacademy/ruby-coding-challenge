@@ -1,11 +1,12 @@
 require 'rspec'
 require 'questions'
+require 'pry'
 
 describe 'learning numbers :' do
 
   it 'round_up_number' do
-    n = round_up_number 3.142
-    expect(n).to eq 4
+    n = round_up_number(3.142)
+    expect(n).to eq(4) 
   end
 
   it 'round_down_number' do
@@ -15,10 +16,10 @@ describe 'learning numbers :' do
 
   it 'make_numbers_negative' do
     a = make_numbers_negative 5
-    b = make_numbers_negative -7
+    b = make_numbers_negative(-7)
 
-    expect(a).to eq -5
-    expect(b).to eq -7
+    expect(a).to eq (-5)
+    expect(b).to eq (-7)
   end
 
 end
@@ -26,17 +27,20 @@ end
 describe 'learning hashes' do
 
   it 'swap_keys_and_values_in_a_hash' do
-    n = swap_keys_and_values_in_a_hash({ 'a' => 'b', 'c' => 'd' })
+    h = { 'a' => 'b', 'c' => 'd' }
+    n = swap_keys_and_values_in_a_hash(h)
     expect(n).to eq({ 'b' => 'a', 'd' => 'c' })
   end
 
   it 'add_together_keys_and_values' do
-    n = add_together_keys_and_values({ 1 => 1, 2 => 2 })
+    h = { 1 => 1, 2 => 2 }
+    n = add_together_keys_and_values(h)
     expect(n).to eq 6
   end
 
   it 'convert_array_to_a_hash' do
-    n = convert_array_to_a_hash ['a', 'b', 'c', 'd']
+    h = ['a', 'b', 'c', 'd']
+    n = convert_array_to_a_hash(h) 
     expect(n).to eq({ 'a' => 'b', 'c' => 'd' })
   end
 

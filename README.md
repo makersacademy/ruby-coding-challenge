@@ -17,6 +17,7 @@ If you're writing a long, complex solution, there's probably a better way.
 * [Fork](insert link to forking) this repo to your own Github
 * Create an account online at [c9.io](https://c9.io)
 * Create a workspace and add your forked repo
+* Run `gem install bundler` in the terminal area
 * Run `bundle install` in the terminal area
 * Answer the first question (in the challenge section)
 * Commit the answer and then follow these steps to commit your code
