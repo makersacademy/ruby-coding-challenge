@@ -14,8 +14,11 @@ If you're writing a long, complex solution, there's probably a better way.
 
 ### Our recommended guide to acing this challenge :
 ============
-* [Fork](insert link to forking) this repo to your own Github
-* Create an account online at [c9.io](https://c9.io)
+* Fork this repo to your own Github
+* Create an account online at [c9.io](https://c9.io) _(NB: this now takes you to the new AWS page)_
+
+These need to be verified - do not follow yet unless you're comfortable with AWS C9
+
 * Create a workspace and add your forked repo
 * Run `bundle install` in the terminal area
 * Answer the first question (in the challenge section)
