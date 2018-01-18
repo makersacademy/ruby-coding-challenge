@@ -1,0 +1,4 @@
+def remove_nils_and_false_from_array(array)
+	array.compact!.delete(false)
+	return array
+end
