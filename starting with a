@@ -1,0 +1,3 @@
+def select_elements_starting_with_a(array)
+	array.select{|a| a.to_s.downcase[0] == "a"}
+end
