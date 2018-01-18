@@ -1,0 +1,3 @@
+def add_together_keys_and_values(hash)
+	hash.inject {|k,v| k+v}.sum
+end
