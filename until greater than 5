@@ -1,0 +1,3 @@
+def get_elements_until_greater_than_five(array)
+	array.take_while {|n| n < 6}
+end
