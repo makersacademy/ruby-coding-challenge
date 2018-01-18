@@ -1,0 +1,4 @@
+def get_first_half_of_string(string)
+	n = (string.length.to_f / 2).ceil
+	string[0,n]
+end
