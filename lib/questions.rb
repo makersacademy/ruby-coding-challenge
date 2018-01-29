@@ -164,7 +164,7 @@ end
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
-def is_a_2014_bank_holiday?(date)
+def is_a_2018_bank_holiday?(date)
 end
 
 # given your birthday this year, this method tells you
