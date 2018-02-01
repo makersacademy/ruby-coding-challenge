@@ -1,4 +1,4 @@
-## The Makers Academy Fellowship challenge
+## The Makers Academy Challenge
 
 We're going to practice solving some Ruby problems and be introduced to the `rspec` part of Ruby testing. These questions vary in level from quite easy to fairly hard. Take your time to work through each question and ensure you're writing the simplest code possible to get each answer correct.
 
