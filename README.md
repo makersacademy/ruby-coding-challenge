@@ -6,7 +6,7 @@ It is possible to answer most questions with a couple of lines of code, and just
 
 If you find you're writing a long, complex solution, there's probably a better way. Get it working and then start to refactor your answer to provide a simpler solution.
 
-Once you're done, submit your solutions by <INSERT SUBMISSION METHOD> and the first <NUMBER> solutions that pass our quality control process will win those people <PRIZE>
+Once you're done, submit your solutions by \<INSERT SUBMISSION METHOD\> and the first \<NUMBER\> solutions that pass our quality control process will win those people \<PRIZE\>
 
 ## Getting started
 
