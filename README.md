@@ -1,12 +1,14 @@
-## The Makers Academy Challenge
+## The Makers Academy Apprenticeships coding challenge
 
-These questions vary in level from quite easy to fairly hard. Take your time to work through each question and ensure you're writing the simplest code possible to get each answer correct.
+### Get on the fast track to your apprenticeship
+
+These questions vary in level from quite easy to fairly hard.
 
 It is possible to answer most questions with a couple of lines of code, and just a few methods. Feel free to use [Ruby docs](http://ruby-doc.org/) and / or StackOverflow as part of your learning.
 
 If you find you're writing a long, complex solution, there's probably a better way. Get it working and then start to refactor your answer to provide a simpler solution.
 
-Once you're done, submit your solutions by \<INSERT SUBMISSION METHOD\> and the first \<NUMBER\> solutions that pass our quality control process will win those people \<PRIZE\>
+Once you're done, submit your answers to us by making a pull request (see below to learn about how that works).  If you're within the first 25 people to complete the exercise, you'll be fast tracked through the application process for Makers Academy Apprenticeships.
 
 ## Getting started
 
@@ -56,7 +58,6 @@ Good luck
 * You shouldn't need any extra libraries or gems
 * You cannot change the tests
 * The cleaner your code the better!
-* Bonus points are available for those who write a 100 word summary of their approach to this challenge.
 * Googling is fine!
 
 ### Tips
@@ -65,7 +66,5 @@ Good luck
 * Try and break down the problems into smaller chunks. For e.g. if you google "How to select elements in an array that start with a", you won't have much luck. Try and find out a) how to select certain elements in an array, b) how to test if a string starts with an 'a'
 * Don't forget Enumerable (advanced array methods)
 * Read our [Onboarding guide](https://docsend.com/view/2qfrifa) - the ultimate book on everything we look for in our candidates.
-* For your summary, make a new file called approach.md and use [GitHub markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
 
 * Don't panic :wink:
