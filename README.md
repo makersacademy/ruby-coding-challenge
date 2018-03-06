@@ -1,10 +1,14 @@
-## The Makers Academy Challenge
+## The Makers Academy Apprenticeships coding challenge
 
-We're going to practice solving some Ruby problems and be introduced to the `rspec` part of Ruby testing. These questions vary in level from quite easy to fairly hard. Take your time to work through each question and ensure you're writing the simplest code possible to get each answer correct.
+### Get on the fast track to your apprenticeship
 
-You should be able to answer most questions with a couple of lines of code, and just a few methods. Feel free to use [Ruby docs](http://ruby-doc.org/) and / or StackOverflow as part of your learning.
+These questions vary in level from quite easy to fairly hard.
+
+It is possible to answer most questions with a couple of lines of code, and just a few methods. Feel free to use [Ruby docs](http://ruby-doc.org/) and / or StackOverflow as part of your learning.
 
 If you find you're writing a long, complex solution, there's probably a better way. Get it working and then start to refactor your answer to provide a simpler solution.
+
+Once you're done, submit your answers to us by making a pull request (see below to learn about how that works).  If you're within the first 25 people to complete the exercise, you'll be fast tracked through the application process for Makers Academy Apprenticeships.
 
 ## Getting started
 
@@ -52,16 +56,15 @@ Good luck
 
 * Try and get the RSpec tests to pass (but not by cheating - i.e. hardcoding the expected value)
 * You shouldn't need any extra libraries or gems
+* You cannot change the tests
 * The cleaner your code the better!
-* Googling is fine as usual
+* Googling is fine!
 
 ### Tips
 
 * Use the ruby docs http://www.ruby-doc.org/
 * Try and break down the problems into smaller chunks. For e.g. if you google "How to select elements in an array that start with a", you won't have much luck. Try and find out a) how to select certain elements in an array, b) how to test if a string starts with an 'a'
 * Don't forget Enumerable (advanced array methods)
-* Read our [Onboarding guide](https://docsend.com/view/2qfrifa) - the ultimate book on everything we look for in our candidates.
-* Join our [Slack community](malearncodingslack.herokuapp.com) To ask / answer questions with fellow learners. We'll have a special channel for this challenge called coding-challenge 
-* Meet and pair program with our alumni on [PairUp](pairup.makersacademy.com). 
+* Read our [Onboarding guide](https://docsend.com/view/bsvnkxf) - the ultimate book on everything we look for in our candidates.
 
 * Don't panic :wink:
