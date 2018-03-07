@@ -8,7 +8,7 @@ It is possible to answer most questions with a couple of lines of code, and just
 
 If you find you're writing a long, complex solutions, there's probably a better way. Get it working and then start to refactor your answer to provide a simpler solution.
 
-Once you feel that you've got as far as possible, let us know by sending an email to apprentices@makersacademy.com **with a link to your code challenge repo**. We'll select up to 25 people to progress. They'll be fast tracked through to an interview for Makers Academy Apprenticeships.
+Once you feel that you've got as far as possible, let us know by sending a Tweet @MA_Apprentices **with a link to your code challenge repo**. We'll select up to 25 people to progress. They'll be fast tracked through to an interview for Makers Academy Apprenticeships.
 
 Bonus points will be awarded for a completed `approach.md` file being submitted. This file should outline the approach you took to solve the challenges. Nothing too long - 50 to 100 words should be enough :thumbsup:
 
