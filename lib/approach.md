@@ -98,3 +98,26 @@ Aware of the unshift method, which adds element to the beginning of an arrays
 Add element as an argument in unshift method, using array parameter
 Print new array
 Test with different arrays and elements as arguments
+
+#20
+#COME BACK TO THIS
+Aware of the .length method to count characters in a string
+
+Need to compare it
+
+Create new variable (short) with infinity assigned to it
+If length of array item is less than short, assign length of array item to short
+Iterate through array
+Short should equal shortest length
+
+short to infinity if possible, if length of array element is more than 0, assign value to
+
+#Q21
+
+#Q22
+Create a variable (total) and set it to 0
+Iterate through an array (using .each).
+Determine if array element is numeric.
+If it is, use += to add the number to total
+Return value of total
+Test using different arrays as arguments
