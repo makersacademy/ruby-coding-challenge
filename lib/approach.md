@@ -29,5 +29,6 @@ Test with different arguments
 #Q5 -
 Go through each key and value, and add them together
 How to go through each key and value? Try .each
+Add key and value together
 How to create a running total of value? Define a variable and use += operator for total
 Test with different arguments
