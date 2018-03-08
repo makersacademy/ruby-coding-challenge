@@ -91,7 +91,17 @@ def select_elements_starting_with_a(array)
 end
 
 # Question 14: keep only the elements that start with a vowel
+# ERROR IN TEST: [john david omar fred idriss angela] expected to equal [omar idriss angela']
+# Test expects string to be returned instead of elements of an array, plus it adds a stray
+# single quotation mark to the end
+#
 def select_elements_starting_with_vowel(array)
+  # the following passes the (faulty) test:
+  # (array.select { |element|  element.start_with?(/[aeiou]/)  }).join(' ') + "'"
+  # the following should solve the question
+  array.select { |element|  element.start_with?(/[aeiou]/)  }
+  # this should solve the questions if case sensitive
+  # array.select { |element|  element.downcase.start_with?(/[aeiou]/)  }
 end
 
 
