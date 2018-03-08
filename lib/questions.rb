@@ -1,58 +1,103 @@
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+	intNumber = float.to_i
+	result = (intNumber < float) ? intNumber + 1 : intNumber
+	return result
 end
 
 # round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
+	intNumber = float.to_i
+	result = (intNumber < float) ? intNumber : intNumber - 1
+	puts result
+	return result
 end
-
 
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+	return number > 0 ? - number : number
 end
+
 
 # swap the keys and values in a hash. e.g.
 # {'a' => 'b', 'c' => 'd'} becomes
 # {'b' => 'a', 'd' => 'c'}
 def swap_keys_and_values_in_a_hash(hash)
+	dictionary = hash
+	result = Hash.new
+	dictionary.each do |key, value|	
+		result[value] = key
+	end
+	return result
 end
+
 
 # in a hash where the keys and values are all numbers
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
+	result = 0
+	hash.each do |key, value|
+		result += key.to_i + value.to_i
+	end
+	return result
 end
+
 
 # turn an array (with an even number of elements) into a hash, by
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+	result = Hash.new
+	if array.count % 2 == 0
+		array.each_index { |x| 
+			if x.even?
+				result[array[x]] = array[x+1]
+			end
+		}
+	end
+	return result
+
 end
 
 
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+	string.each_char do |s|
+		if s == s.capitalize && s != " "
+			string.delete! s
+		end
+	end
+	result = string
+	return result
 end
 
+remove_capital_letters_from_string("Hello JohnDoe")
 
 # cut strings in half, and return the first half, e.g.
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+	lenght = string.length
+	return lenght%3 == 0 ? string[0..lenght/2] : string[0..round_up_number(lenght/2)]
 end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+	return symbol.to_s
 end
-
 
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+	startIndex = email.index("@")
+	endIndex = email.index(".")
+
+	return email[startIndex+1..endIndex-1]
 end
 
 # capitalize the first letter in each word of a string,
@@ -61,6 +106,10 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+
+	#capitalize all letters
+	#if ! a and and the index between 0 and 2 downcase except at 0
+
 end
 
 # return true if a string contains any special characters
