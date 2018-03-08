@@ -144,17 +144,19 @@ def select_elements_starting_with_vowel(array)
 	resultArray = Array.new
 
 	arraySplit = array.to_s.split(" ")
-
+	
 	arraySplit.each do |element|
 		if element.scan(/[aeiou]/).include? element[0]
 			resultArray.push(element)
 		end
 	end
 
-	resultString = resultArray.join(" ")
+	return resultArray.join(" ")
+	#this returns "omar idriss angela", however in the test i get nil
 
-	return resultString
 end
+
+select_elements_starting_with_vowel("john david omar fred idriss angela")
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
@@ -218,31 +220,33 @@ end
 def shortest_word_in_array(array)
 	arraySplit = array[0].split
 	result = arraySplit[0]
+
 	arraySplit.each do |word|
 		if word.length < result.length
 			result = word
 		end
 	end
 
-	puts result
-
+	return result
+	
+	#method returns the right value however it does not correctly show in the rspec
 end
-
-shortest_word_in_array(["here is a bunch of words of different lengths"])
-
 
 
 # return the shortest word in an array
 def longest_word_in_array(array)
 	arraySplit = array[0].split
 	result = arraySplit[0]
+
 	arraySplit.each do |word|
 		if word.length > result.length
 			result = word
 		end
+
 	end
 	
 	return result
+	#method returns the right value however it does not correctly show in the rspec
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
@@ -310,7 +314,7 @@ end
 # should return 20
 def get_upper_limit_of(range)
 
-	return range.last
+	return range.max
 
 end
 
@@ -385,8 +389,7 @@ def your_birthday_is_on_a_friday_in_the_year(birthday)
 
 	return dateResult.year.to_s
 
-	#why return the day as a string given that you are asking for the year
-	#even if the year is made to be a string, having it capitalized makes no sense
+	#the correct answer is 2020 for the date in the test, not 2021
 
 end
 
