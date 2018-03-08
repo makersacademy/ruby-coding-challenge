@@ -58,3 +58,10 @@ titleize_a_string
 check_a_string_for_special_characters
 - Used regexp to check for non-word character. Regex taken from http://ruby-doc.org/core-2.1.1/Regexp.html
 - Added if statement to return true or false depending on whether non-word character found
+
+select_elements_starting_with_a
+- Initial plan: iterate over array with #each, removing all elements starting with a
+- Unable to figure out regex or other method to check first letter
+- Searched on google, found https://stackoverflow.com/a/40556949/7542912
+- Understood immediately, adapted for this method
+
