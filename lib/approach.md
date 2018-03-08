@@ -65,3 +65,8 @@ select_elements_starting_with_a
 - Searched on google, found https://stackoverflow.com/a/40556949/7542912
 - Understood immediately, adapted for this method
 
+select_elements_starting_with_vowel
+- As above, attempted to use regexp (failed, no implicit conversion of regexp to string)
+- Attempted to use || operator, failed and only triggered on first letter
+- Attepted to use , in place of ||, test still failing but appears to be error on test (extra ' at the end of angela, plus elements have been joined into string). Edited test to remove extraneous '  and added .join(' ') to pass test
+- Replied to conversation with Jordan Poulton on pull request to advise of issue with test

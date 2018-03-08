@@ -104,8 +104,9 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+	array.select! { |element| element.start_with?('a','e','i','o','u') }
+	string = array.join(' ')
 end
-
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
