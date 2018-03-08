@@ -54,3 +54,7 @@ titleize_a_string
 - Iterated over array using #each, capitalizing each word with capitalize!
 - Added case statement to check for 'a', 'the', and 'and', which are ignored
 - Rejoined array into string, adding spaces
+
+check_a_string_for_special_characters
+- Used regexp to check for non-word character. Regex taken from http://ruby-doc.org/core-2.1.1/Regexp.html
+- Added if statement to return true or false depending on whether non-word character found

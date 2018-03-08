@@ -90,6 +90,11 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+	if /\W/.match(string)
+		true
+	else
+		false
+	end
 end
 
 # keep only the elements that start with an a
