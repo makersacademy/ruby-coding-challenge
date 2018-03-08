@@ -45,5 +45,12 @@ turn_symbol_into_string
 
 get_domain_name_from_email_address
 - Used #index to find index of '@'
-- Used range to obtain characters between @ and .com (.com is last 4 digits so range ...-4)
-- Failed as still giving @, updated local variable at with +1, now working.
+- Used slice to obtain characters between @ and .com (.com is last 4 digits so range ...-4)
+- Failed as still giving @, updated local variable at with +1, now working
+
+titleize_a_string
+- Split string into array, splitting at each space (' ')
+- Capitalized first word using #capitalize! to overwrite
+- Iterated over array using #each, capitalizing each word with capitalize!
+- Added case statement to check for 'a', 'the', and 'and', which are ignored
+- Rejoined array into string, adding spaces
