@@ -167,10 +167,11 @@ short to infinity if possible, if length of array element is more than 0, assign
 #Q22
 Create a variable (total) and set it to 0
 Iterate through an array (using .each).
-Determine if array element is numeric.
+Determine if array element is an integer before attempting to add to total.
 If it is, use += to add the number to total
 Return value of total
 Test using different arrays as arguments
+What if number is not an integer, but a float? Found on Stack Overflow that Numeric can be used instead of Integer
 
 #Q23
 
