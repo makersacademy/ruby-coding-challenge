@@ -127,3 +127,5 @@ format_date_nicely
 is_a_3_dot_range?
 - Tried to use #match, however while researching how to use it discovered Range#exclude_end?
 
+square_root_of
+- Squared numbers are to power 2 (number**2), square roots are to power 0.5 (number**0.5)
