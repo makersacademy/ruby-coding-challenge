@@ -91,4 +91,10 @@ If yes, return true. If not return false
 Aware that shift removes first element of an array
 Therefore can create method, which shifts first item in array three times. Use .times method
 Print new array
-Test with different arguments
+Test with different arrays as arguments
+
+#Q19
+Aware of the unshift method, which adds element to the beginning of an arrays
+Add element as an argument in unshift method, using array parameter
+Print new array
+Test with different arrays and elements as arguments
