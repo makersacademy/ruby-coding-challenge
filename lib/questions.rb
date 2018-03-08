@@ -97,9 +97,10 @@ def remove_nils_and_false_from_array(array)
   array.keep_if { |element| element != false && element != nil }
 end
 
-# don't reverse the array, but reverse every word inside it. e.g.
+# Question 17: don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
+  array.each {|word| word.reverse!}
 end
 
 # discard the first 3 elements of an array,
