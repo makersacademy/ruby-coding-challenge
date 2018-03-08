@@ -116,3 +116,8 @@ get_all_letters_in_array_of_words
 format_date_nicely
 - Tried to use a range on the date, failing as not a string so converted to string
 - returned string rearranged to give date nicely formatted
+
+**get_upper_limit_of**
+- Assuming range will be .. range rather than ... range (can adjust if necessary)
+- Saw note about String#partition in previous research so looked it up in ruby docs, then called the tail section(last) of the range which was converted to a string.
+- Test requires output to be integer so added #to_i
