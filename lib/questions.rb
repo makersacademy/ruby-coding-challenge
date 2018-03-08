@@ -158,12 +158,9 @@ def select_elements_starting_with_vowel(array)
 	end
 
 	resultString = resultArray.join(" ")
-	
+
 	return resultString
 end
-
-select_elements_starting_with_vowel(["john david omar fred idriss angela"])
-
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
@@ -232,8 +229,14 @@ def shortest_word_in_array(array)
 			result = word
 		end
 	end
+
 	return result
+
 end
+
+shortest_word_in_array(["here is a bunch of words of different lengths"])
+
+
 
 # return the shortest word in an array
 def longest_word_in_array(array)
@@ -244,13 +247,14 @@ def longest_word_in_array(array)
 			result = word
 		end
 	end
+	
 	return result
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
-	puts array.reduce(:+)
+	return array.reduce(:+)
 end
 
 # get the average from an array, rounded to the nearest integer
@@ -343,7 +347,6 @@ def call_method_from_string(str_method)
 	return str_method
 
 end
-
 
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
