@@ -102,3 +102,13 @@ total_of_array
 average_of_array
 - As above, then divided by length of the array, then rounded.
 - Initial local variable is a float instead of an integer to allow rounding later
+
+get_elements_until_greater_than_five
+- Initial idea: #shift array[0] until array[0] > 5
+- Coded, tested. Failed test returned nil
+- returned the new array
+
+get_all_letters_in_array_of_words
+- Initial idea: split array of words into array of letters then alphabetize
+- Split array by iterating using #each, though this left me with a multidimensional array
+- Ruby docs suggested flattening multidimensional array using flatten, tried and it worked, so I called sort on the resulting array

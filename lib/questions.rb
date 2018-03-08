@@ -171,6 +171,9 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+	returned = []
+	returned.push(array.shift) until array[0] > 5
+	returned
 end
 
 # get all the letters used in an array of words and return
@@ -178,6 +181,9 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+letters = []
+	array.each { |word| letters.push(word.split('')) }
+	letters.flatten.sort
 end
 
 # BONUS SECTION
