@@ -43,7 +43,7 @@ Turning nested array with paired items into hash: try .to_h
 Test with different arguments
 
 #Q7 -
-How to isolate capital letters from a string?
-How to remote capital letters from a string?
-Possibly can identify capital letters as uppercase?
-With gsub, can replace identified characters. But how will this work with uppercase letters?
+Need to isolate characters - split string into array
+How to tell if character is capitalised / uppercase? If else statement, possibly using upcase, downcase
+If downcase, add to new string, if not, don't add it
+return new string
