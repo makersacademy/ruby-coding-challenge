@@ -114,12 +114,14 @@ def add_element_to_beginning_of_array(array, element)
   array.unshift(element)
 end
 
-# return the shortest word in an array
+# Question 20: return the shortest word in an array
 def shortest_word_in_array(array)
+  array.min { |word1, word2| word1.length <=> word2.length }
 end
 
-# return the shortest word in an array
+# Question 21: return the longest word in an array
 def longest_word_in_array(array)
+  array.max { |word1, word2| word1.length <=> word2.length }
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
