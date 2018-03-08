@@ -180,6 +180,13 @@ Test using different arrays as arguments
 What if number is not an integer, but a float? Found on Stack Overflow that Numeric can be used instead of Integer
 
 #Q23
+Average number is sum of numbers, divided by number of items
+Add all numbers in the array - try .each and add numbers to a new variable
+Divide the total by number of items - find number of items in array. Try .length
+Round total to nearest integer - try .round .to_i - returns 16, not 17
+Convert total to float so when divided by array.length, float is returned and can be rounded
+Round average to nearest integer - .round
+Test using different arrays as arguments
 
 #Q24
 Go through each item in the array and check if it is greater than 5
