@@ -22,6 +22,12 @@ Test with different arguments
 #Q4 -
 
 Identify what the keys and values are
-How to swap them around - .invert
-Does it work? 
+How to swap them around - .invert (found on Stack Overflow)
+Does it work?
+Test with different arguments
+
+#Q5 -
+Go through each key and value, and add them together
+How to go through each key and value? Try .each
+How to create a running total of value? Define a variable and use += operator for total
 Test with different arguments
