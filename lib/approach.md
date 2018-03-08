@@ -39,3 +39,6 @@ get_first_half_of_string
 - popped the second half of the string length using second_half
 - used #join to join array back into string
 - Tested each step after adding code to confirm it was doing what was expected
+
+turn_symbol_into_string
+- Used #to_s
