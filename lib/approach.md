@@ -14,5 +14,10 @@ make_numbers_negative
 - Refactored later to convert if statement to single line if statement
 
 swap_keys_and_values_in_a_hash
-- Typed "ruby swap key value hash" in google, first stackoverflow link suggested hash.invert among other methods. Noted safe_invert if failed.
+- Typed "ruby swap key value hash" in google, first stack overflow link suggested hash.invert among other methods. Noted safe_invert if failed.
 - Tested hash.invert, worked. Currently don't understand code within safe_invert so have bookmarked for later study
+
+add_together_keys_and_values
+- Initial idea was to convert hash to array and sum all together
+- Used to_a method on hash, then used .inject(0){|sum,x| sum + x } (found on stack overflow). Testing failed
+- Thought instead of iterating using #each and summing all keys and values together. Worked and easily understood
