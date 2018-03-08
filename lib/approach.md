@@ -95,3 +95,6 @@ shortest_word_in_array
 
 longest_word_in_array
 - As above, substituting #max for #min
+
+total_of_array
+- Iterated over provided argument with #each, adding each element to a local variable named total, returned total
