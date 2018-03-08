@@ -94,6 +94,7 @@ If yes, return true. If not return false
 #Q13
 Iterate over each item in array, isolating the first character (bracket notation)
 Use if statement to assess whether character at index 0 (first letter) is "a" or "A"
+Each wouldn't work here, as we don't need to go through each letter
 If this is true, add the array element to a new array.
 If it is false, do not add to new array
 Print new array
@@ -103,6 +104,7 @@ Test with different array elements in argument
 #TO COMPLETE
 Similar approach to previous question
 Iterate over each item in array, isolating the first character (bracket notation)
+Each wouldn't work here, as we don't need to go through each letter
 Use if statement to assess whether character at index 0 (first letter) is a vowel
 If this is true, add the array element to a new array.
 If it is false, do not add to new array
@@ -120,12 +122,20 @@ Test with nil, booleans and strings in array
 #Q16
 Everything in Ruby is true except false and nil.
 Therefore using similar approach to above question
-Use if statement and OR conditional, checking if array element is true (Test if .nil? can work here)
+Use if statement and OR conditional, checking if array element is true
+Came across .nil on Stack Overflow - considering if it can be used here
+Source: http://bit.ly/2IbFI1W
 If it is, add to new array and return it
 Test with nil, booleans and strings in array
 
 
 #Q17
+Isolate each item of the array. How? Using .each
+Already aware that .reverse can be used on strings.
+Check if .reverse! can be used to mutate original array - This works
+Print array
+Test with different arrays
+#NTS - refactor to ensure item in array are strings?
 
 #Q18
 Aware that shift removes first element of an array
