@@ -52,6 +52,14 @@ end
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+  string_split = string.chars.to_a
+  new_string = ""
+  string_split.each do |x|
+    if x == x.downcase
+      new_string += x
+    end
+  end
+    puts new_string
 end
 
 
