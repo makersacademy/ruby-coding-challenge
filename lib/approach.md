@@ -35,5 +35,9 @@ Test with different arguments
 
 #Q6 -
 How to add a new key value pair to a hash? Yes - hashname[key] = value
-How to do this for each pair of items in an array? Not sure how to isolate pairs
+How to do this for each pair of items in an array? Not sure how to isolate pairs. Need to research
 Is there a method which can do this? Need to research
+How to turn nested paired arrays into a hash? Need to research
+
+Pairing up items in an array : try arrayname.each_slice(2).to_a
+Turning nested array with paired items into hash: try .to_h
