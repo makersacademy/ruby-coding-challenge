@@ -109,8 +109,9 @@ def all_elements_except_first_3(array)
   array.drop(3)
 end
 
-# add an element to the beginning of an array
+# Question 19: add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
+  array.unshift(element)
 end
 
 # return the shortest word in an array
