@@ -32,16 +32,17 @@ def add_together_keys_and_values(hash)
   hash.keys.sum + hash.values.sum
 end
 
-# turn an array (with an even number of elements) into a hash, by
+# Question 6: turn an array (with an even number of elements) into a hash, by
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
 end
 
 
-# take out all the capital letters from a string
+# Question 7: take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+  string.gsub(/[[:upper:]]/, '')
 end
 
 
