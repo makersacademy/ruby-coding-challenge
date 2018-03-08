@@ -151,6 +151,15 @@ end
 
 #21 return the longest word in an array
 def longest_word_in_array(array)
+  longest_num = 0
+  longest_word = ""
+  array.each do |x|
+    if x.length > longest_num
+      longest_num = x.length
+      longest_word = x
+    end
+  end
+puts longest_word
 end
 
 #22 add up all the numbers in an array, so [1, 3, 5, 6]
