@@ -75,18 +75,14 @@ def remove_capital_letters_from_string(string)
 	return result
 end
 
-remove_capital_letters_from_string("Hello JohnDoe")
-
 # cut strings in half, and return the first half, e.g.
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
 	lenght = string.length
-	return lenght%3 == 0 ? string[0..lenght/2-1] : string[0..round_up_number(lenght/2)]
+	return lenght%3 == 0 ? string[0...lenght/2] : string[0..round_up_number(lenght/2)]
 
 end
-
-get_first_half_of_string("banana")
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
@@ -98,7 +94,6 @@ end
 def get_domain_name_from_email_address(email)
 	startIndex = email.index("@")
 	endIndex = email.index(".")
-
 	return email[startIndex+1..endIndex-1]
 end
 
@@ -127,7 +122,7 @@ def check_a_string_for_special_characters(string)
 		end
 	}
 
-	puts hasSpecialChar
+	return hasSpecialChar
 
 end
 
@@ -229,7 +224,7 @@ def shortest_word_in_array(array)
 		end
 	end
 
-	return result
+	puts result
 
 end
 
@@ -257,7 +252,6 @@ def total_of_array(array)
 	return result
 end
 
-total_of_array([1, 3, 5, 6, 2, 8])
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
