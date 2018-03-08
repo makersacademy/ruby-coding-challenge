@@ -43,7 +43,8 @@ Turning nested array with paired items into hash: try .to_h
 Test with different arguments
 
 #Q7 -
-Need to isolate characters - split string into array
+Need to isolate characters - split string into array by character - chars.to_a
+Iterate through each item in array with .each
 How to tell if character is capitalised / uppercase? If else statement, possibly using upcase, downcase
-If downcase, add to new string, if not, don't add it
+If downcase or whitespace, add to new string, if not, don't add it
 return new string
