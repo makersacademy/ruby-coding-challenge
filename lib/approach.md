@@ -121,3 +121,9 @@ format_date_nicely
 - Assuming range will be .. range rather than ... range (can adjust if necessary)
 - Saw note about String#partition in previous research so looked it up in ruby docs, then called the tail section(last) of the range which was converted to a string.
 - Test requires output to be integer so added #to_i
+- Ended up with: range.to_s.partition('..').last.to_i
+- Discovered Range#end when researching next challenge, updated and amended
+
+is_a_3_dot_range?
+- Tried to use #match, however while researching how to use it discovered Range#exclude_end?
+
