@@ -80,3 +80,7 @@ remove_nils_and_false_from_array
 
 reverse_every_element_in_array
 - Used #each to call #reverse! on each element of the array
+
+all_elements_except_first_3
+- Started to research Array#shift, in ruby docs refers to array.slice!(0, n)
+- Adapted array.slice!(0, n)
