@@ -121,3 +121,17 @@ Determine if array element is numeric.
 If it is, use += to add the number to total
 Return value of total
 Test using different arrays as arguments
+
+#Q23
+
+#Q24
+Aware of breaks and loops
+Iterate through array using .each
+if array element is less than 6, print it, until reaching the first element array which is greater than 6.
+Break loop
+
+#Q25
+Iterate through array (use .each), and return each letter as a character (chars.to_a), assigning it to a new array
+Aware that items can be sorted by .sort. Apply this to array with sort!
+Return array
+Test using different arrays as arguments
