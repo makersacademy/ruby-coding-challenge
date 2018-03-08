@@ -92,16 +92,29 @@ If yes, return true. If not return false
 
 
 #Q13
-Iterate over each item, isolating the first character (bracket notation)
+Iterate over each item in array, isolating the first character (bracket notation)
 Use if statement to assess whether character at index 0 (first letter) is "a" or "A"
 If this is true, add the array element to a new array.
 If it is false, do not add to new array
-Print new arrays
+Print new array
 Test with different array elements in argument
 
 #Q14
+#TO COMPLETE
+Similar approach to previous question
+Iterate over each item in array, isolating the first character (bracket notation)
+Use if statement to assess whether character at index 0 (first letter) is a vowel
+If this is true, add the array element to a new array.
+If it is false, do not add to new array
+Print new array
+Test with different array elements in argument
 
 #Q15
+Similar approach to question 13
+Iterate over each item in array
+Use if statement to see if array item is not equal to nil.
+If not equal to nil, add to new array and test
+Test with nil, booleans and strings in array
 
 #Q16
 
