@@ -42,3 +42,8 @@ get_first_half_of_string
 
 turn_symbol_into_string
 - Used #to_s
+
+get_domain_name_from_email_address
+- Used #index to find index of '@'
+- Used range to obtain characters between @ and .com (.com is last 4 digits so range ...-4)
+- Failed as still giving @, updated local variable at with +1, now working.
