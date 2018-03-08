@@ -167,6 +167,9 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+  new_array = []
+  array.each {|i| new_array += i.chars.to_a}
+  print new_array.sort!
 end
 
 # BONUS SECTION
