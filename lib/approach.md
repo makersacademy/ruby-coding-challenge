@@ -115,8 +115,15 @@ Iterate over each item in array
 Use if statement to see if array item is not equal to nil.
 If not equal to nil, add to new array and test
 Test with nil, booleans and strings in array
+#NOTE to self - when refactoring, check .nil?
 
 #Q16
+Everything in Ruby is true except false and nil.
+Therefore using similar approach to above question
+Use if statement and OR conditional, checking if array element is true (Test if .nil? can work here)
+If it is, add to new array and return it
+Test with nil, booleans and strings in array
+
 
 #Q17
 
