@@ -3,7 +3,7 @@
 def round_up_number(float)
   # step 1: round up the number
   # step 2: convert to int
-  puts float.ceil.to_i
+  float.ceil.to_i
 end
 
 # round down a float up and convert it to an Integer,
@@ -11,7 +11,7 @@ end
 def round_down_number(float)
   # step 1: round down the number
   # step 2: convert to int
-  puts float.floor.to_i
+  float.floor.to_i
 end
 
 # turn a positive integer into a negative integer. A negative integer
@@ -20,9 +20,10 @@ def make_numbers_negative(number)
   # step 1: check if number is negative
   # if positive, turn to negative
   if number.positive?
-    puts -number
+    -number
   else
-    puts number
+    number
+  end
 end
 
 # swap the keys and values in a hash. e.g.
