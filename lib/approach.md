@@ -21,3 +21,10 @@ add_together_keys_and_values
 - Initial idea was to convert hash to array and sum all together
 - Used to_a method on hash, then used .inject(0){|sum,x| sum + x } (found on stack overflow). Testing failed
 - Thought instead of iterating using #each and summing all keys and values together. Worked and easily understood
+
+convert_array_to_a_hash
+- Considering there is #to_a, assumed there would be #to_h, confirmed in ruby docs
+- Tested using array.to_h, failed
+- Searched failure on google, discovered stack overflow page discussing differences between #to_h and Hash[]
+- Noticed arrays being given are multidimensional with each object in the array being an array with two objects. Decided to try and convert provided argument into multiple arrays with two objects apiece
+- Stack overflow led me to #slice(n), tested in combination with #to_h, worked! 
