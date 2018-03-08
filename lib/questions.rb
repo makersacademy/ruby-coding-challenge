@@ -13,9 +13,7 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
-	if number > 0
-		number *= -1
-	end
+	number *= -1 if number > 0
 	number
 end
 
@@ -23,6 +21,7 @@ end
 # {'a' => 'b', 'c' => 'd'} becomes
 # {'b' => 'a', 'd' => 'c'}
 def swap_keys_and_values_in_a_hash(hash)
+	hash.invert
 end
 
 # in a hash where the keys and values are all numbers
