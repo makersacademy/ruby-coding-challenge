@@ -38,6 +38,12 @@ How to add a new key value pair to a hash? Yes - hashname[key] = value
 How to do this for each pair of items in an array? Not sure how to isolate pairs. Need to research
 Is there a method which can do this? Need to research
 How to turn nested paired arrays into a hash? Need to research
-
 Pairing up items in an array : try arrayname.each_slice(2).to_a
 Turning nested array with paired items into hash: try .to_h
+Test with different arguments
+
+#Q7 -
+How to isolate capital letters from a string?
+How to remote capital letters from a string?
+Possibly can identify capital letters as uppercase?
+With gsub, can replace identified characters. But how will this work with uppercase letters?
