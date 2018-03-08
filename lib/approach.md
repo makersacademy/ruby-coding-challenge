@@ -33,3 +33,9 @@ remove_capital_letters_from_string
 - Have been learning about regexps, tried string = string.gsub(/A-Z/,''), failed.
 - Realised failure is due to regexp searching for "A-Z" rather than all uppercase characters individually, amended to string = string.gsub(/[A-Z]/,''), worked
 
+get_first_half_of_string
+- used #length to obtain length of string, then divided by 2, rounded down using #floor (will #pop ). Stored in local variable second_half
+- used #split('') to split string into array
+- popped the second half of the string length using second_half
+- used #join to join array back into string
+- Tested each step after adding code to confirm it was doing what was expected

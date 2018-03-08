@@ -46,11 +46,14 @@ def remove_capital_letters_from_string(string)
 	string = string.gsub(/[A-Z]/,'')
 end
 
-
 # cut strings in half, and return the first half, e.g.
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+	second_half = ((string.length)/2).floor
+	array = string.split('')
+	second_half.times { array.pop }
+	string = array.join('')
 end
 
 # convert a symbol into a string
