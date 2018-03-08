@@ -148,13 +148,21 @@ end
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
 	resultArray = Array.new
-	array.each do |element|
+
+	arraySplit = array.to_s.split(" ")
+
+	arraySplit.each do |element|
 		if element.scan(/[aeiou]/).include? element[0]
 			resultArray.push(element)
 		end
 	end
-	return resultArray
+
+	resultString = resultArray.join(" ")
+	
+	return resultString
 end
+
+select_elements_starting_with_vowel(["john david omar fred idriss angela"])
 
 
 # remove instances of nil (but NOT false) from an array
