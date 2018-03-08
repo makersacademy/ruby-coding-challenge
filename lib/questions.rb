@@ -11,7 +11,6 @@ end
 def round_down_number(float)
 	intNumber = float.to_i
 	result = (intNumber < float) ? intNumber : intNumber - 1
-	puts result
 	return result
 end
 
@@ -83,7 +82,7 @@ remove_capital_letters_from_string("Hello JohnDoe")
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
 	lenght = string.length
-	puts lenght%3 == 0 ? string[0..lenght/2-1] : string[0..round_up_number(lenght/2)]
+	return lenght%3 == 0 ? string[0..lenght/2-1] : string[0..round_up_number(lenght/2)]
 
 end
 
