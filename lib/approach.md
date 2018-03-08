@@ -151,20 +151,17 @@ Add element as an argument in unshift method, using array parameter
 Print new array
 Test with different arrays and elements as arguments
 
-#20
-#COME BACK TO THIS
-Aware of the .length method to count characters in a string
+#Q20 - first draft
+Note: Aware of the .length method to count characters in a string
+Approach similar to #Q21 below. Differences:
+- assigning num variable the length of the first array element to have something to compare to
+- if array element is less in length than first array element, assign value to num
+- and assign array element as word variable
+When testing, with "a" as shortest word in array, word variable returns blank
+- Solution - assign first element array as word variable. This will be reassigned if other array elements have a shorter length
+Test again with different arrays and elements as arguments
 
-Need to compare it
-
-Create new variable (short) with infinity assigned to it
-If length of array item is less than short, assign length of array item to short
-Iterate through array
-Short should equal shortest length
-
-short to infinity if possible, if length of array element is more than 0, assign value to
-
-#Q21
+#Q21 - first draft
 Note: Aware of the .length method to count characters in a string
 Compare length of arrays to each together
 - Go through each item in array - use .each
