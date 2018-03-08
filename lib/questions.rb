@@ -63,6 +63,9 @@ end
 # Question 10: get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  # all_parts = email.partition('@')[-1]
+  # all_parts.partition('.')[0]
+  email.partition('@')[-1].partition('.')[0]
 end
 
 # Question 11: capitalize the first letter in each word of a string,
