@@ -253,8 +253,11 @@ end
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
-	return array.reduce(:+)
+	result = array.reduce(:+)
+	return result
 end
+
+total_of_array([1, 3, 5, 6, 2, 8])
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
@@ -342,10 +345,14 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+	method = str_method.to_sym
 
-	return str_method
-
+	if respond_to?(method)
+		self.send(method)
+	end
 end
+
+call_method_from_string("Array.new(5, 0)")
 
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
@@ -370,22 +377,27 @@ end
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
 
-	#while day != friday 
-	#27 jan 2019 == friday?
-
 	dateStart = birthday
 	dateResult = Time.new
 	year = dateStart.year
+	day = dateStart.day
+	month = dateStart.month
 
-	until dateResult.friday? == true
-		dateResult = Time.new(year, 1, 27)
+	#until dateResult.friday? == true
+	begin
+		dateResult = Time.new(year, month, day)
 		year += 1
-	end 
+	end while dateResult.friday? != true
 
-	return dateResult
+	return dateResult.year.to_s
+
+	#why return the day as a string given that you are asking for the year
+	#even if the year is made to be a string, having it capitalized makes no sense
 
 end
 
+
+your_birthday_is_on_a_friday_in_the_year(Time.new(2018, 1, 1))
 
 # count the number of words in a file
 def word_count_a_file(file_path)
