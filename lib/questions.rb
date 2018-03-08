@@ -103,9 +103,10 @@ def reverse_every_element_in_array(array)
   array.each {|word| word.reverse!}
 end
 
-# discard the first 3 elements of an array,
+# Question 18: discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+  array.drop(3)
 end
 
 # add an element to the beginning of an array
