@@ -48,3 +48,24 @@ Iterate through each item in array with .each
 How to tell if character is capitalised / uppercase? If else statement, possibly using upcase, downcase
 If downcase or whitespace, add to new string, if not, don't add it
 return new string
+Test with different arguments
+
+#Q8
+
+Return length of a string using .length
+Convert integer to a float
+Divide length by two and round up using .ceil. Assign integer to new variable
+Split string into an array by characters
+Use loop, where if i is less than or equal to new variable, add to new string
+Come back to this
+
+#Q9
+
+Aware of .to_s (to string) method. Check if it can convert a symbol to a string
+Test with different arguments
+
+#Q10
+
+Identify where @ is located, and remove everything before it. Assign to a variable
+Take variable and identify where .com is located and remove everything after it
+Assign to new variable and return it
