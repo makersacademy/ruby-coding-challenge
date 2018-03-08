@@ -73,3 +73,7 @@ select_elements_starting_with_vowel
 
 remove_nils_from_array
 - As above, amended select block to ignore nil
+
+remove_nils_and_false_from_array
+- Works by using the same select block as above, except select amended to select!
+- Refactored due to DRY
