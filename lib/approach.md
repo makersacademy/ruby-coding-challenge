@@ -69,3 +69,26 @@ Test with different arguments
 Identify where @ is located, and remove everything before it. Assign to a variable
 Take variable and identify where .com is located and remove everything after it
 Assign to new variable and return it
+
+#Q11
+COME BACK TO THIS
+
+#Q12
+#COME BACK TO THIS
+Split string into an array by characters
+Identify special characters - anything that isn't alphanumeric - /\W/ command
+Use if else statement to identify if array contains identified special characters.
+If yes, return true. If not return false
+
+#Q13
+#COME BACK TO THIS
+
+14 - 16
+
+#Q17
+
+#Q18
+Aware that shift removes first element of an array
+Therefore can create method, which shifts first item in array three times. Use .times method
+Print new array
+Test with different arguments

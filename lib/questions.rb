@@ -89,39 +89,44 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+
+#NOTE TO SELF - come back to this
 end
 
 # return true if a string contains any special characters
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+  #COME BACK TO THIS
 end
 
-# keep only the elements that start with an a
+#13 keep only the elements that start with an a
 def select_elements_starting_with_a(array)
 end
 
-# keep only the elements that start with a vowel
+#14 keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
 end
 
 
-# remove instances of nil (but NOT false) from an array
+#15 remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
 end
 
-# remove instances of nil AND false from an array
+#16 remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
 end
 
-# don't reverse the array, but reverse every word inside it. e.g.
+#17 don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
 end
 
-# discard the first 3 elements of an array,
+#18 discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+  3.times {array.shift}
+  print array
 end
 
 # add an element to the beginning of an array
