@@ -92,3 +92,6 @@ shortest_word_in_array
 - Initial plan: create an array with the lengths of each element in the provided argument, then return the shortest
 - Created lengths array, populated by calling #each on the provided argument, using #push to add the length of each element in order to the lengths array
 - Found the index of the minimum length element in the provided argument, returned this element
+
+longest_word_in_array
+- As above, substituting #max for #min
