@@ -98,3 +98,7 @@ longest_word_in_array
 
 total_of_array
 - Iterated over provided argument with #each, adding each element to a local variable named total, returned total
+
+average_of_array
+- As above, then divided by length of the array, then rounded.
+- Initial local variable is a float instead of an integer to allow rounding later
