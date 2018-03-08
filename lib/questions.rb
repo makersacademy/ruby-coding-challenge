@@ -40,10 +40,10 @@ def convert_array_to_a_hash(array)
 	array.each_slice(2).to_h
 end
 
-
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+	string = string.gsub(/[A-Z]/,'')
 end
 
 

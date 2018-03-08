@@ -27,4 +27,9 @@ convert_array_to_a_hash
 - Tested using array.to_h, failed
 - Searched failure on google, discovered stack overflow page discussing differences between #to_h and Hash[]
 - Noticed arrays being given are multidimensional with each object in the array being an array with two objects. Decided to try and convert provided argument into multiple arrays with two objects apiece
-- Stack overflow led me to #slice(n), tested in combination with #to_h, worked! 
+- Stack overflow led me to #slice(n), tested in combination with #to_h, worked!
+
+remove_capital_letters_from_string
+- Have been learning about regexps, tried string = string.gsub(/A-Z/,''), failed.
+- Realised failure is due to regexp searching for "A-Z" rather than all uppercase characters individually, amended to string = string.gsub(/[A-Z]/,''), worked
+
