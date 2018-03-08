@@ -112,3 +112,7 @@ get_all_letters_in_array_of_words
 - Initial idea: split array of words into array of letters then alphabetize
 - Split array by iterating using #each, though this left me with a multidimensional array
 - Ruby docs suggested flattening multidimensional array using flatten, tried and it worked, so I called sort on the resulting array
+
+format_date_nicely
+- Tried to use a range on the date, failing as not a string so converted to string
+- returned string rearranged to give date nicely formatted

@@ -181,7 +181,7 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
-letters = []
+	letters = []
 	array.each { |word| letters.push(word.split('')) }
 	letters.flatten.sort
 end
@@ -191,6 +191,8 @@ end
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
+	string = date.to_s
+	string = "#{string[8..9]}/#{string[5..6]}/#{string[0..3]}"
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
