@@ -51,16 +51,22 @@ return new string
 Test with different arguments
 
 #Q8
-COME BACK TO THIS
-Return length of a string using .length
-Convert integer to a float
-Divide length by two and round up using .ceil. Assign integer to new variable
-Split string into an array by characters
-Use loop, where if i is less than or equal to new variable, add to new string
+#To complete
+Return length of a string and convert integer to float.
+If length is odd, dividing length by half will return whole number, therefore convert to float
+Divide length by two and round up to nearest integer - use .ceil.
+Assign integer to new variable for use later (halfnum)
+Split string into an array by characters.
+To iterate over each letter in word (use .each) comparing array index with (halfnum)
+If index number is less than half num, add letter to new array
+Convert new array to string and puts to console
+Test with different strings as argument
+Add if else statement so if string.length is even, divide by 2
+If not, just divide by 2
+
 
 
 #Q9
-
 Aware of .to_s (to string) method. Check if it can convert a symbol to a string
 Test with different arguments
 
@@ -71,7 +77,7 @@ Take variable and identify where .com is located and remove everything after it
 Assign to new variable and return it
 
 #Q11
-#COME BACK TO THIS
+#TO COMPLETE
 Aware there is .capitalize method. However this only does it for first word in a string
 Split words into array.
 Use if statement to apply .capitalize if array element does not include and, or, a
@@ -84,7 +90,7 @@ Test with different arguments
 
 
 #Q12
-#COME BACK TO THIS
+#TO COMPLETE
 Split string into an array by characters
 Identify special characters - anything that isn't alphanumeric -
 Use if else statement to identify if array contains identified special characters.
@@ -176,11 +182,12 @@ What if number is not an integer, but a float? Found on Stack Overflow that Nume
 #Q23
 
 #Q24
-#TO COMPLETE
-Aware of breaks and loops
-Iterate through array using .each
-if array element is less than 6, print it, until reaching the first element array which is greater than 6.
-Break loop
+Go through each item in the array and check if it is greater than 5
+If lower than 5, add to new array.
+If it is true, stop checking other array elements.
+Aware of breaks in loops. Assess whether they can be used here. Result - this works
+Test using different arrays as arguments
+
 
 Note to self - check .any?
 
@@ -198,8 +205,8 @@ Test using different arrays as arguments
 #Q28
 
 #Q29
-Remind self what a square root is
-Aware that there is a square root method
+Remind self what a square root is. Result of a squared number
+Aware that there could be a square root method
 Google search returns Math.sqrt(x)
 Replace x with number argument in square_root_of method
 Test using various numbers as arguments

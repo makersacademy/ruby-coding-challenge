@@ -171,6 +171,12 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+  new_array=[]
+  array.each do |x|
+    break if x > 5
+    new_array << [x]
+  end
+  print new_array
 end
 
 #25 get all the letters used in an array of words and return
