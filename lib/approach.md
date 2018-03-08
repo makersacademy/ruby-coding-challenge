@@ -134,3 +134,10 @@ call_method_from_string
 - Have previously used #send, attempted but was giving undefined method error
 - Research led me to https://stackoverflow.com/a/31893465/7542912
 - Amended to eval, works
+
+is_a_2018_bank_holiday
+- called argument to confirm format of argument
+- test failed, looked into it and the test has 2014 listed when it should have had 2018, amended
+- One way of doing this is to have an array of all the bank holiday dates in string format, then matching the argument (converted to string) to confirm if it == one of the objects
+- Another way is a case statement
+- Wrote case statement, worked

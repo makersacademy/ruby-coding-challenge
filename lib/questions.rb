@@ -225,6 +225,19 @@ end
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
+	case date
+	when Time.new(2018, 1, 1), 
+		 Time.new(2018, 3, 30),
+		 Time.new(2018, 4, 02),
+		 Time.new(2018, 5, 07),
+		 Time.new(2018, 5, 28),
+		 Time.new(2018, 8, 27),
+		 Time.new(2018,12, 25),
+		 Time.new(2018,12, 26)
+		 true
+	else
+		false
+	end
 end
 
 # given your birthday this year, this method tells you
