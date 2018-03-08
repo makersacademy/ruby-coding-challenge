@@ -191,6 +191,7 @@ end
 
 #29 get the square root of a number
 def square_root_of(number)
+  puts Math.sqrt(number)
 end
 
   --- tougher ones ---

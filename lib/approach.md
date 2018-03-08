@@ -135,3 +135,15 @@ Iterate through array (use .each), and return each letter as a character (chars.
 Aware that items can be sorted by .sort. Apply this to array with sort!
 Return array
 Test using different arrays as arguments
+
+
+#Q26
+
+#Q27
+
+#Q28
+
+#Q29
+Aware that there is a square root method - Math.sqrt(x)
+Replace x with number argument in square_root_of method
+Test using various numbers as arguments
