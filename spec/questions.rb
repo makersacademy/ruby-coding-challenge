@@ -83,11 +83,8 @@ remove_capital_letters_from_string("Hello JohnDoe")
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
 	lenght = string.length
-	puts lenght%3 == 0 ? string[0..lenght/2-1] : string[0..round_up_number(lenght/2)]
-
+	return lenght%3 == 0 ? string[0..lenght/2] : string[0..round_up_number(lenght/2)]
 end
-
-get_first_half_of_string("banana")
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
