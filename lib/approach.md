@@ -129,3 +129,8 @@ is_a_3_dot_range?
 
 square_root_of
 - Squared numbers are to power 2 (number**2), square roots are to power 0.5 (number**0.5)
+
+call_method_from_string
+- Have previously used #send, attempted but was giving undefined method error
+- Research led me to https://stackoverflow.com/a/31893465/7542912
+- Amended to eval, works
