@@ -77,3 +77,6 @@ remove_nils_from_array
 remove_nils_and_false_from_array
 - Works by using the same select block as above, except select amended to select!
 - Refactored due to DRY
+
+reverse_every_element_in_array
+- Used #each to call #reverse! on each element of the array
