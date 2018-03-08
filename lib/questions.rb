@@ -17,6 +17,12 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+  # step 1: check if number is negative
+  # if positive, turn to negative
+  if number.positive?
+    puts -number
+  else
+    puts number
 end
 
 # swap the keys and values in a hash. e.g.
