@@ -32,3 +32,8 @@ How to go through each key and value? Try .each
 Add key and value together
 How to create a running total of value? Define a variable and use += operator for total
 Test with different arguments
+
+#Q6 -
+How to add a new key value pair to a hash? Yes - hashname[key] = value
+How to do this for each pair of items in an array? Not sure how to isolate pairs
+Is there a method which can do this? Need to research
