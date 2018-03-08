@@ -51,13 +51,13 @@ return new string
 Test with different arguments
 
 #Q8
-
+COME BACK TO THIS
 Return length of a string using .length
 Convert integer to a float
 Divide length by two and round up using .ceil. Assign integer to new variable
 Split string into an array by characters
 Use loop, where if i is less than or equal to new variable, add to new string
-Come back to this
+
 
 #Q9
 
@@ -71,19 +71,39 @@ Take variable and identify where .com is located and remove everything after it
 Assign to new variable and return it
 
 #Q11
-COME BACK TO THIS
+#COME BACK TO THIS
+Aware there is .capitalize method. However this only does it for first word in a string
+Split words into array.
+Use if statement to apply .capitalize if array element does not include and, or, a
+Use .include on first item of array to check if it contains and, or, a
+If it does, capitalize. If not, leave as is as it will already be capitalized
+appears include does not take multiple arguments. Stack overflow returned .present
+Join array together to create string
+Return strings
+Test with different arguments
+
 
 #Q12
 #COME BACK TO THIS
 Split string into an array by characters
-Identify special characters - anything that isn't alphanumeric - /\W/ command
+Identify special characters - anything that isn't alphanumeric -
 Use if else statement to identify if array contains identified special characters.
 If yes, return true. If not return false
 
-#Q13
-#COME BACK TO THIS
 
-14 - 16
+#Q13
+Iterate over each item, isolating the first character (bracket notation)
+Use if statement to assess whether character at index 0 (first letter) is "a" or "A"
+If this is true, add the array element to a new array.
+If it is false, do not add to new array
+Print new arrays
+Test with different array elements in argument
+
+#Q14
+
+#Q15
+
+#Q16
 
 #Q17
 
@@ -125,10 +145,13 @@ Test using different arrays as arguments
 #Q23
 
 #Q24
+#TO COMPLETE
 Aware of breaks and loops
 Iterate through array using .each
 if array element is less than 6, print it, until reaching the first element array which is greater than 6.
 Break loop
+
+Note to self - check .any?
 
 #Q25
 Iterate through array (use .each), and return each letter as a character (chars.to_a), assigning it to a new array
@@ -144,6 +167,8 @@ Test using different arrays as arguments
 #Q28
 
 #Q29
-Aware that there is a square root method - Math.sqrt(x)
+Remind self what a square root is
+Aware that there is a square root method
+Google search returns Math.sqrt(x)
 Replace x with number argument in square_root_of method
 Test using various numbers as arguments
