@@ -84,3 +84,6 @@ reverse_every_element_in_array
 all_elements_except_first_3
 - Started to research Array#shift, in ruby docs refers to array.slice!(0, n)
 - Adapted array.slice!(0, n)
+
+add_element_to_beginning_of_array
+- Used #unshift() to add element to the beginning of the array
