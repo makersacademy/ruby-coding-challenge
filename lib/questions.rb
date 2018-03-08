@@ -130,19 +130,20 @@ def total_of_array(array)
   array.sum
 end
 
-# get the average from an array, rounded to the nearest integer
+# Question 23: get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
+  (array.sum / array.length.to_f).round
 end
 
-# get all the elements in an array, up until the first element
+# Question 24: get all the elements in an array, up until the first element
 # which is greater than five. e.g.
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
 end
 
-# get all the letters used in an array of words and return
+# Question 25: get all the letters used in an array of words and return
 # it as a array of letters, in alphabetical order
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
