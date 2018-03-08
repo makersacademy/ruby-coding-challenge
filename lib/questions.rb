@@ -14,7 +14,15 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+  if number < 0
+    puts number
+  elsif number > 0
+    puts -number
+  else puts "Your number is not positive or negative"
+  end
 end
+
+#Note to self - refactor ^
 
 # swap the keys and values in a hash. e.g.
 # {'a' => 'b', 'c' => 'd'} becomes
