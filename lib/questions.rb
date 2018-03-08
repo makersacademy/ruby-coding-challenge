@@ -9,8 +9,10 @@ end
 # round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
+  # step 1: round down the number
+  # step 2: convert to int
+  puts float.floor.to_i
 end
-
 
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
