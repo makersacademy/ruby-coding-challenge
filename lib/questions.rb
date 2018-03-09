@@ -66,10 +66,20 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+  # step 1: calculate length (even or odd)
+  if (string.length).odd?
+    half = (string.length/2).next
+  else
+    half = (string.length/2)
+  end
+  # step 2: grab first half (length) of string (.slice)
+  string[0, half]
 end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+  # to_s is mentioned as a method for the Symbol object in the documentation
+  symbol.to_s
 end
 
 
