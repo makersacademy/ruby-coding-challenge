@@ -37,7 +37,7 @@ end
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
   sum = 0
-  hash.each {|k, v| sum += (k+v)}
+  hash.each {|key, value| sum += (key + value)}
   sum
 end
 
@@ -56,9 +56,9 @@ end
 def remove_capital_letters_from_string(string)
   string_split = string.chars.to_a
   new_string = ""
-  string_split.each do |x|
-    if x == x.downcase
-      new_string += x
+  string_split.each do |char|
+    if char == char.downcase
+      new_string += char
     end
   end
     new_string
@@ -128,7 +128,7 @@ end
 #13 keep only the elements that start with an a
 def select_elements_starting_with_a(array)
   a_array = []
-  array.each {|x| a_array << x if (x[0] == "a") || (x[0] == "A")}
+  array.each {|item| a_array << item if (item[0] == "a") || (item[0] == "A")}
   a_array
 end
 
@@ -141,7 +141,7 @@ end
 #15 remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
   new_array = []
-  array.each {|x| new_array << x if x != nil}
+  array.each {|item| new_array << item if item != nil}
   new_array
 end
 
@@ -149,7 +149,7 @@ end
 #16 remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
   new_array = []
-  array.each {|x| new_array << x if !(x.nil? || x==false)}
+  array.each {|item| new_array << item if !(item.nil? || item==false)}
   new_array
 end
 
@@ -157,7 +157,7 @@ end
 #17 don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
-  array.each {|x| x.reverse!}
+  array.each {|item| item.reverse!}
   array
 end
 
@@ -180,10 +180,10 @@ end
 def shortest_word_in_array(array)
   shortest_num = array[0].length
   shortest_word = array[0]
-  array.each do |x|
-    if x.length < shortest_num
-      shortest_num = x.length
-      shortest_word = x
+  array.each do |word|
+    if word.length < shortest_num
+      shortest_num = word.length
+      shortest_word = word
     end
   end
   shortest_word
@@ -194,10 +194,10 @@ end
 def longest_word_in_array(array)
   longest_num = 0
   longest_word = ""
-  array.each do |x|
-    if x.length > longest_num
-      longest_num = x.length
-      longest_word = x
+  array.each do |word|
+    if word.length > longest_num
+      longest_num = word.length
+      longest_word = word
     end
   end
   longest_word
@@ -208,7 +208,7 @@ end
 # returns 15
 def total_of_array(array)
   total = 0
-  array.each {|x| total +=x if x.is_a? Numeric}
+  array.each {|num| total +=num if num.is_a? Numeric}
   total
 end
 
@@ -217,7 +217,7 @@ end
 # so [10, 15, 25] should return 17
 def average_of_array(array)
   total = 0
-  array.each {|x| total += x}
+  array.each {|num| total += num}
   average = (total.to_f / array.length).round
 end
 
@@ -228,9 +228,9 @@ end
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
   new_array=[]
-  array.each do |x|
-    break if x > 5
-    new_array << x
+  array.each do |num|
+    break if num > 5
+    new_array << num
   end
   new_array
 end
@@ -242,7 +242,7 @@ end
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
   new_array = []
-  array.each {|i| new_array += i.chars.to_a}
+  array.each {|word| new_array += word.chars.to_a}
   new_array.sort!
 end
 
@@ -278,7 +278,7 @@ end
 
 
 
-  # --- tougher ones ---
+# --- tougher ones ---
 
 #30 call an arbitrary method from a string. so if I
 # called call_method_from_string('foobar')
