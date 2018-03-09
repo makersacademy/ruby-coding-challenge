@@ -13,8 +13,12 @@
  - Tested proposed solutions to assess if the results were as expected.
  - If yes, I proceeded to the next mini problem
  - If not, I revisited the mini problem and researched an alternative solution.
- - Repeated steps until all method returned expected results
+ - Repeated steps until the method returned expected results
 ----------
+**Note:**
+ - Solution in questions_spec.rb appears to be incorrect with a rogue quotation mark
 
 **Incomplete questions:**
  - 26, 30, 31, 32, 33, 34
+<br/>
+Danielle (Elle) H.
