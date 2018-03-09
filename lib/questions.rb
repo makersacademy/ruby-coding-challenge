@@ -141,7 +141,7 @@ end
 #15 remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
   new_array = []
-  array.each {|x| new_array << [x] if x != nil}
+  array.each {|x| new_array << x if x != nil}
   new_array
 end
 
