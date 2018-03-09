@@ -128,7 +128,7 @@ end
 #13 keep only the elements that start with an a
 def select_elements_starting_with_a(array)
   a_array = []
-  array.each {|x| a_array << [x] if (x[0] == "a") || (x[0] == "A")}
+  array.each {|x| a_array << x if (x[0] == "a") || (x[0] == "A")}
   a_array
 end
 
