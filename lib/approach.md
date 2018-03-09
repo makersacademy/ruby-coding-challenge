@@ -1,3 +1,5 @@
+[insert introduction here]
+
 #Q1 - first draft
 How to round a float?
 - Aware of .round method. Does this round it up? No.
@@ -45,6 +47,7 @@ Turning nested array with paired items into hash:
 - Puts new hash
 Test with different arguments
 
+
 #Q7 - first draft
 Isolate characters to assess them
 - Split string into array by character - chars.to_a
@@ -56,19 +59,23 @@ How to tell if character is capitalised / uppercase?
 Return new string
 Test with different arguments
 
-#Q8
-#TO COMPLETE
-Return length of a string and convert integer to float.
-If length is odd, dividing length by half will return whole number, therefore convert to float
-Divide length by two and round up to nearest integer - use .ceil.
-Assign integer to new variable for use later (halfnum)
-Split string into an array by characters.
-To iterate over each letter in word (use .each) comparing array index with (halfnum)
-If index number is less than half num, add letter to new array
-Convert new array to string and puts to console
+
+#Q8 - first draft
+What is the number of string length
+- Use .length
+- Assign to variable num
+Assess if number is odd of even and how dividing in half will affect number
+- Dividing an odd integer in half will produce a decimal number however will return rounded down Integer
+- converting num to a float, and using .ceil to round up instead.
+- Assign to new variable for use later (halfnum)
+Assess each letter's position in a word individually and compare the position with halfnum
+- convert each character to an array
+- .each won't work here as index of array needs to be considered
+- Google search returns .each_with_index
+- If statement - if the index is less than halfnum, add array element to the end of new array
+Return the first half of the word
+- Convert new array to string and puts to console
 Test with different strings as argument
-Add if else statement so if string.length is even, divide by 2
-If not, just divide by 2
 
 
 #Q9 - first draft
