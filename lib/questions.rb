@@ -36,6 +36,11 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+  new_array = []
+  while array.length > 0 do
+    new_array.push(array.pop(2))
+  end
+  new_array.to_h
 end
 
 
