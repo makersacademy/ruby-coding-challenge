@@ -151,7 +151,7 @@ def select_elements_starting_with_a(array)
 			resultArray.push(element)
 		end
 	end
-	resultArray
+	return resultArray
 end
 
 
@@ -167,11 +167,9 @@ def select_elements_starting_with_vowel(array)
 		end
 	end
 
-	puts resultArray.join(" ")
+	return resultArray.join(" ")
 	#this returns "omar idriss angela", however in the test i get nil
 end
-
-select_elements_starting_with_vowel("john david omar fred idriss angela")
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
