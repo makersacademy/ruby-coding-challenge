@@ -1,6 +1,7 @@
-# round up a float up and convert it to an Integer,
+# Q1 round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+  puts float.ceil
 end
 
 # round down a float up and convert it to an Integer,
