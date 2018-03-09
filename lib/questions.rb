@@ -1,6 +1,8 @@
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+  # Returns the smallest Integer greater than or equal to float.
+  float.ceil
 end
 
 # round down a float up and convert it to an Integer,
