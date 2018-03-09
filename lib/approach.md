@@ -13,11 +13,11 @@
 
 <a name="#challenge"></a>
 ### *Q1 - round up a float up and convert it to an Integer, so 3.214 becomes 4*
-***How to round a float?***
-	-- Aware of .round method. Does this round it up? No.
-***How to round up a float to the next integer***
-	-- Google search returns .ceil method. This works
-***Create tests using method and inputting different floats as an argument***
+***How to round a float?***<br />
+	-- Aware of .round method. Does this round it up? No.<br />
+***How to round up a float to the next integer***<br />
+	-- Google search returns .ceil method. This works<br />
+***Create tests using method and inputting different floats as an argument***<br />
 
 ----------
 
