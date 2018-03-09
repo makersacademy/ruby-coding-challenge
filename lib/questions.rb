@@ -149,7 +149,7 @@ end
 #16 remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
   new_array = []
-  array.each {|x| new_array << [x] if !(x.nil? || x==false)}
+  array.each {|x| new_array << x if !(x.nil? || x==false)}
   new_array
 end
 
