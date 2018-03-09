@@ -105,7 +105,23 @@ end
 def titleize_a_string(string)
 
 		# Too difficult :)
+
+		arraySplit = string.split(" ").map { |word| 
+			if word != "and" && word != "the" && word != "a"
+				word.capitalize 
+			else
+				word.downcase
+			end
+		}
+
+		if arraySplit.first == "the" || arraySplit.first == "a" || arraySplit.first == "and"
+			arraySplit.first.capitalize!
+		end
+
+		return arraySplit.join(" ")
+
 end
+
 
 
 # return true if a string contains any special characters
@@ -135,7 +151,7 @@ def select_elements_starting_with_a(array)
 			resultArray.push(element)
 		end
 	end
-	return resultArray
+	resultArray
 end
 
 
@@ -151,9 +167,8 @@ def select_elements_starting_with_vowel(array)
 		end
 	end
 
-	return resultArray.join(" ")
+	puts resultArray.join(" ")
 	#this returns "omar idriss angela", however in the test i get nil
-
 end
 
 select_elements_starting_with_vowel("john david omar fred idriss angela")
