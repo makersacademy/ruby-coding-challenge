@@ -1,49 +1,59 @@
 #Q1 - first draft
-How to round a float - .round - does this round it up? No.
-How to round up a float to the next integer - .ceil - does this round it up? Yes
+How to round a float?
+- Aware of .round method. Does this round it up? No.
+How to round up a float to the next integer
+- Google search returns .ceil method. This works
 Create tests using method and inputting different floats as an argument
 
 #Q2 - first draft
-How to round a float - .round.
-Does it round it down? - no
-How to round float to integer below - .floor
+How to round a float?
+- Aware of .round method. Does it round it down? - No
+How to round float to integer below
+- Google search returns .floor method. This works
 Test with different arguments
 
 #Q3 - first draft
 How to tell if a number is pos or neg?
-Neg - less than 0
-Pos - more than 0
-Use if else statement
+- Negative is less than 0. Positive is more than 0
+Assess if number is higher or lower than 0
+- Use if else statement
+Consider outcome if number is 0
 Test with different arguments
 
 #Q4 - first draft
-Identify what the keys and values are
-How to swap them around - .invert (found on Stack Overflow)
-Does it work?
+Identify what the keys and values are in hash
+How to swap them around?
+- Stack Overflow search returned .invert. This works
 Test with different arguments
 
 #Q5 - first draft
 Go through each key and value, and add them together
-How to go through each key and value? Try .each
-Add key and value together
-How to create a running total of value? Define a variable and use += operator for total
+How to go through each key and value?
+- Try .each, adding each and value together
+How to create a running total of value of keys and values?
+- Define a variable and use += operator for total
 Test with different arguments
 
 #Q6 - first draft
-How to add a new key value pair to a hash? Yes - hashname[key] = value
-How to do this for each pair of items in an array? Not sure how to isolate pairs. Need to research
-Is there a method which can do this? Need to research
-How to turn nested paired arrays into a hash? Need to research
-Pairing up items in an array : try arrayname.each_slice(2).to_a
-Turning nested array with paired items into hash: try .to_h
+How to add a new key value pair to a hash?
+- Aware that hashname[key] = value does this
+How to do this for each pair of items in an array? Does method exist?
+- Stack Overflow returned the following for pairing up items in array: arrayname.each_slice(2).to_a
+- Turns pairs into nested arrays
+Turning nested array with paired items into hash:
+- Google search returned .to_h. This works
+- Puts new hash
 Test with different arguments
 
 #Q7 - first draft
-Need to isolate characters - split string into array by character - chars.to_a
-Iterate through each item in array with .each
-How to tell if character is capitalised / uppercase? If else statement, possibly using upcase, downcase
-If downcase or whitespace, add to new string, if not, don't add it
-return new string
+Isolate characters to assess them
+- Split string into array by character - chars.to_a
+Iterate through each item in array
+- .each method does this
+How to tell if character is capitalised / uppercase?
+- Try If else statement, possibly using upcase, downcase to compare array items with
+- If downcase or whitespace, add to new string. If not, don't add it
+Return new string
 Test with different arguments
 
 #Q8
@@ -61,15 +71,24 @@ Add if else statement so if string.length is even, divide by 2
 If not, just divide by 2
 
 
-
 #Q9 - first draft
-Aware of .to_s (to string) method. Check if it can convert a symbol to a string
+How to convert to a string?
+- Aware of .to_s (to string) method.
+- Check if it can convert a symbol to a string. This works
 Test with different arguments
 
+
 #Q10 - first draft
-Identify where @ is located, and remove everything before it. Assign to a variable
-Take variable and identify where .com is located and remove everything after it
-Assign to new variable and return it
+Identify where @ is located, and remove everything before it.
+- Stack overflow search returned partition & last methods.
+- Partition: Creates an array, splitting at specified character
+- Last: returns value of last array element (domain and .com)
+- Assign result to a new variable
+Take new variable and identify where .com is located and remove everything after it
+- Aware of split method. Does this work here if (".com" is parameter?) - Yes
+Return domain
+Test with different email addresses as arguments
+
 
 #Q11
 #TO COMPLETE
@@ -94,13 +113,15 @@ Not familiar with regex, but Google search shows how to identify alphanumeric ch
 
 
 #Q13 - first draft
-Iterate over each item in array, isolating the first character (bracket notation)
-Use if statement to assess whether character at index 0 (first letter) is "a" or "A"
-Each wouldn't work here, as we don't need to go through each letter
-If this is true, add the array element to a new array.
-If it is false, do not add to new array
+Check each array element and check first character of value
+- Iterate over each item (.each), isolating the first character (bracket notation)
+Assess whether character at index 0 is "a" or "A"
+- Use if statement with or
+If true, add the array element to a new array.
+If false, do not add to new array
 Print new array
 Test with different array elements in argument
+
 
 #Q14
 #TO COMPLETE
@@ -113,46 +134,56 @@ If it is false, do not add to new array
 Print new array
 Test with different array elements in argument
 
+
 #Q15 - first draft
 Similar approach to question 13
-Iterate over each item in array
-Use if statement to see if array item is not equal to nil.
-If not equal to nil, add to new array and test
+Check each array element to see if it contains nil
+- Iterate using .each
+Check if array element is not equal to nil
+- Use if statement
+If not equal to nil, add to new array. When complete, print new array with nil omitted
 Test with nil, booleans and strings in array
-#NOTE to self - when refactoring, check .nil?
+
 
 #Q16 - first draft
-Everything in Ruby is true except false and nil.
-Therefore using similar approach to above question
-Use if statement and OR conditional, checking if array element is true
-Came across .nil on Stack Overflow - considering if it can be used here
-Source: http://bit.ly/2IbFI1W
-If it is, add to new array and return it
+Note: Everything in Ruby is true except false and nil.
+Check each array element to see if it contains nil
+- Iterate using each. Assess using if statement
+- Include or statement as both nil and false need to be considered
+- Came across .nil on Stack Overflow - considering if it can be used here. This works
+- Source: http://bit.ly/2IbFI1W
+If it doesn't contain nil or false, add to new array and return it
 Test with nil, booleans and strings in array
 
 
 #Q17 - first draft
-Isolate each item of the array. How? Using .each
-Already aware that .reverse can be used on strings.
-Check if .reverse! can be used to mutate original array - This works
-Print array
-Test with different arrays
-#NTS - refactor to ensure item in array are strings?
+Assess each array element
+- Use .each to isolate items
+Reverse contents in array element
+- Already aware that .reverse exists
+- Test if .reverse! can be used to mutate original array - This works
+Print array with reversed values
+Test with different arrays as arguments
+
 
 #Q18 - first draft
-Aware that shift removes first element of an array
-Therefore can create method, which shifts first item in array three times. Use .times method
+Access first element of the array and remove it
+- I'm aware that .shift removes first element of an array
+Do this multiple times, so first 3 items are removed
+- Aware of .times method for repetition. This works
 Print new array
 Test with different arrays as arguments
 
+
 #Q19 - first draft
-Aware of the unshift method, which adds element to the beginning of an arrays
-Add element as an argument in unshift method, using array parameter
+How to add an element to an array at the front
+- Aware of the unshift method, which takes the new element argument
+- Add new element as an argument in unshift method. Value retrieved from array parameter
 Print new array
 Test with different arrays and elements as arguments
 
+
 #Q20 - first draft
-Note: Aware of the .length method to count characters in a string
 Approach similar to #Q21 below. Differences:
 - assigning num variable the length of the first array element to have something to compare to
 - if array element is less in length than first array element, assign value to num
@@ -161,14 +192,16 @@ When testing, with "a" as shortest word in array, word variable returns blank
 - Solution - assign first element array as word variable. This will be reassigned if other array elements have a shorter length
 Test again with different arrays and elements as arguments
 
+
 #Q21 - first draft
-Note: Aware of the .length method to count characters in a string
 Compare length of arrays to each together
+- Aware of the .length method to count characters in a string
 - Go through each item in array - use .each
-Set empty num variable, assigned value of 0
-Compare array element length to num variable.
-Keep note of the longest length to compare each item to
--If larger than current value of num, assign array element length to num
+- Set empty num variable, assigned value of 0
+- Compare array element length to num variable.
+Keep note of the longest length to compare each array element length to
+- If larger than current value of num, assign array element length to num
+- Result - largest number will always be assigned to num
 Keep note of array element with longest length
 - assign array element value to word variable if conditions above are true
 Print the word associated with longest length
@@ -177,40 +210,56 @@ Test with different arrays as argument
 
 
 #Q22 - first draft
-Create a variable (total) and set it to 0
-Iterate through an array (using .each).
+Go through each item and add it to the next
+- Need a container to hold sum of values
+- Create a variable (total) and set it to 0
+- Iterate through an array (using .each).
 Determine if array element is an integer before attempting to add to total.
-If it is, use += to add the number to total
+- Use if statement, to check type of value array item contains
+- If it is, use += to add the number to total
 Return value of total
 Test using different arrays as arguments
-What if number is not an integer, but a float? Found on Stack Overflow that Numeric can be used instead of Integer
+What if number is not an integer, but a float?
+- Found on Stack Overflow that Numeric can be used instead of Integer. Refactored method
+
 
 #Q23 - first draft
-Average number is sum of numbers, divided by number of items
-Add all numbers in the array - try .each and add numbers to a new variable
-Divide the total by number of items - find number of items in array. Try .length
-Round total to nearest integer - try .round .to_i - returns 16, not 17
-Convert total to float so when divided by array.length, float is returned and can be rounded
-Round average to nearest integer - .round
+Note to self: Average number is sum of numbers, divided by number of items
+Add all numbers in the array
+- try .each, adding numbers to a new variable
+Divide the total by number of items
+- find number of items in array. Try .length
+Round total to nearest integer
+- try .round .to_i - returns 16, not 17
+Need to be a decimal number
+- Reason: it can return decimal number if result of being divided does not return a whole number
+- Convert total to float so when divided by array.length, float is returned and can be rounded
+Round average to nearest integer
+- .round
 Test using different arrays as arguments
+
 
 #Q24 - first draft
 Go through each item in the array and check if it is greater than 5
+- Use .each
 If lower than 5, add to new array.
-If it is true, stop checking other array elements.
-Aware of breaks in loops. Assess whether they can be used here. Result - this works
+If array element is larger than 5, stop checking other array elements.
+- Aware of breaks in loops. Assess whether they can be used here. Result - this works
 Test using different arrays as arguments
+#Note to self - check .any?
 
-
-Note to self - check .any?
 
 #Q25 - first draft
-Go through array (use .each)
-Return each letter as a character (chars.to_a)
-Assign it to a new array
-Aware that items can be sorted by .sort. Apply this to array with sort!
-print array
+Assess letters individually
+- Go through array (use .each)
+- Return each letter as a character (chars.to_a)
+Assign characters a new array
+Sort array in alphabetical order
+- Aware that items can be sorted by .sort. Mutate array using sort!
+Print array
 Test using different arrays as arguments
+
+
 
 BONUS QUESTIONS
 #Q26
@@ -219,11 +268,14 @@ BONUS QUESTIONS
 
 #Q28
 
+
 #Q29 - first draft
-Reminder of what a square root is. Result of a squared number
+What is a square root?
+- Result of a squared number
 Aware that there could be a square root method
-Google search returns Math.sqrt(x)
+- Google search returns Math.sqrt(x)
 Replace x with number argument in square_root_of method
 Test using various numbers as arguments
+
 
 TOUGHER QUESTIONS
