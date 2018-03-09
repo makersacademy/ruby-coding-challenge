@@ -17,7 +17,6 @@
 	-- Aware of .round method. Does this round it up? No.<br />
 ***How to round up a float to the next integer***<br />
 	-- Google search returns .ceil method. This works<br />
-***Create tests using method and inputting different floats as an argument***<br />
 
 ----------
 
@@ -27,7 +26,6 @@
 -- Aware of .round method. Does it round it down? - No <br />
 ***How to round float to integer below*** <br />
 -- Google search returns .floor method. This works <br />
-***Test with different arguments*** <br />
 
 ----------
 
@@ -37,15 +35,15 @@
 ***Assess if number is higher or lower than 0*** <br />
 -- Use if else statement <br />
 ***Consider outcome if number is 0*** <br />
-***Test with different arguments*** <br />
+
 
 ----------
 
 ### *Q4 - first draft*
 ***Identify what the keys and values are in the hash***
 ***How to swap them around?***
--- Stack Overflow search returned .invert. This works
-***Test with different arguments***
+-- Stack Overflow search returned .invert.
+***Return swapped keys and values***
 
 ----------
 
@@ -55,7 +53,6 @@
 -- Try .each, adding each and value together <br />
 ***How to create a running total of value of keys and values?*** <br />
 -- Define a variable and use += operator for total <br />
-***Test with different arguments*** <br />
 
 ----------
 
@@ -69,7 +66,6 @@
 ***Turning nested array with paired items into hash:*** <br />
 -- Google search returned .to_h. This works <br />
 -- Puts new hash <br />
-***Test with different arguments*** <br />
 
 ----------
 
@@ -81,8 +77,6 @@
 ***How to tell if character is capitalised / uppercase?*** <br />
 -- Try If else statement, possibly using upcase, downcase to compare array items with <br />
 -- If downcase or whitespace, add to new string. If not, don't add it <br />
-***Return new string*** <br />
-***Test with different arguments*** <br />
 
 ----------
 
@@ -100,16 +94,14 @@
 -- Google search returns .each_with_index <br />
 -- If statement - if the index is less than halfnum, add array element to the end of new array <br />
 ***Return the first half of the word*** <br />
--- Convert new array to string and puts to console <br />
-***Test with different strings as argument*** <br />
+-- Convert new array to string <br />
 
 ----------
 
 ### *Q9 - first draft*
 ***How to convert to a string?*** <br />
 -- Aware of .to_s (to string) method. <br />
--- Check if it can convert a symbol to a string. This works <br />
-***Test with different arguments*** <br />
+-- Check if it can convert a symbol to a string. <br />
 
 ----------
 
@@ -121,8 +113,7 @@
 -- Assign result to a new variable <br />
 ***Take new variable and identify where .com is located and remove everything after it*** <br />
 -- Aware of split method. Does this work here if (".com" is parameter?) - Yes <br />
-***Return domain*** <br />
-***Test with different email addresses as arguments*** <br />
+***Return domain as string*** <br />
 
 ----------
 
@@ -148,7 +139,6 @@ Test with different arguments <br />
 -- no longer needed <br />
 ***Return true if string contains special characters*** <br />
 -- with if else statement
-***Test with different arguments*** <br />
 
 ----------
 
@@ -159,8 +149,7 @@ Test with different arguments <br />
 ***Assess whether character at index 0 is "a" or "A"*** <br />
 -- Use if statement with or <br />
 ***If true, add the array element to a new array. If false, do not add to new array*** <br />
-***Print new array*** <br />
-***Test with different array elements in argument*** <br />
+***Return new array*** <br />
 
 ----------
 
@@ -182,8 +171,6 @@ Each wouldn't work here, as we don't need to go through each letter <br />
 Use if statement to assess whether character at index 0 (first letter) is a vowel <br />
 If this is true, add the array element to a new array. <br />
 If it is false, do not add to new array <br />
-Print new array <br />
-Test with different array elements in argument <br />
 
 ----------
 
@@ -193,8 +180,8 @@ Note: Similar approach to question 13 <br />
 -- Iterate using .each <br />
 ***Check if array element is not equal to nil*** <br />
 -- Use if statement <br />
-***If not equal to nil, add to new array. When complete, print new array with nil omitted*** <br />
-***Test with nil, booleans and strings in array*** <br />
+***If not equal to nil, add to new array.
+-- Return new array with nil omitted*** <br />
 
 ----------
 
@@ -206,7 +193,6 @@ Note: Everything in Ruby is true except false and nil. <br />
 -- Came across .nil on Stack Overflow - considering if it can be used here. This works <br />
 -- Source: http://bit.ly/2IbFI1W <br />
 ***If it doesn't contain nil or false, add to new array and return it*** <br />
-***Test with nil, booleans and strings in array*** <br />
 
 ----------
 
@@ -216,8 +202,7 @@ Note: Everything in Ruby is true except false and nil. <br />
 ***Reverse contents in array element*** <br />
 - Aware that .reverse method exists <br />
 - Test if .reverse! can be used to mutate original array - This works <br />
-***Print array with reversed values*** <br />
-***Test with different arrays as arguments*** <br />
+***Return array with reversed values*** <br />
 
 ----------
 
@@ -226,8 +211,7 @@ Note: Everything in Ruby is true except false and nil. <br />
 - Aware that .shift removes first element of an array <br />
 ***Do this multiple times, so first 3 items are removed*** <br />
 -- Aware of .times method for repetition. This works <br />
-***Print new array*** <br />
-***Test with different arrays as arguments*** <br />
+***Return new array*** <br />
 
 ----------
 
@@ -236,8 +220,7 @@ Note: Everything in Ruby is true except false and nil. <br />
 -- Aware of the unshift method, which takes the new element argument <br />
 -- Add new element as an argument in unshift method <br />
 -- Value retrieved from array parameter <br />
-***Print new array*** <br />
-***Test with different arrays and elements as arguments*** <br />
+***Return new array*** <br />
 
 ----------
 
@@ -248,7 +231,6 @@ Note: Everything in Ruby is true except false and nil. <br />
 - and assign array element as word variable <br />
 ***When testing, with "a" as shortest word in array, word variable returns blank*** <br />
 - Solution - assign first element array as word variable. This will be reassigned if other array elements have a shorter length <br />
-***Test again with different arrays and elements as arguments*** <br />
 
 ----------
 
@@ -265,7 +247,6 @@ Note: Everything in Ruby is true except false and nil. <br />
 - assign array element value to word variable if conditions above are true <br />
 ***Print the word associated with longest length*** <br />
 - Stored in word variable <br />
-***Test with different arrays as argument*** <br />
 
 ----------
 
@@ -298,7 +279,7 @@ Note to self: Average number is sum of numbers, divided by number of items <br /
 -- Convert total to float so when divided by array.length, float is returned and can be rounded <br />
 ***Round average to nearest integer*** <br />
 -- try .round
-***Test using different arrays as arguments*** <br />
+***Return average*** <br />
 
 ----------
 
@@ -308,8 +289,7 @@ Note to self: Average number is sum of numbers, divided by number of items <br /
 ***If lower than 5, add to new array.*** <br />
 ***If array element is larger than 5, stop checking other array elements.*** <br />
 -- Aware of breaks in loops. Assess whether they can be used here. <br />
--- Result - this works <br />
-***Test using different arrays as arguments*** <br />
+***Return array***
 
 ----------
 
@@ -320,8 +300,7 @@ Note to self: Average number is sum of numbers, divided by number of items <br /
 ***How to assign characters a new array*** <br />
 ***How to sort array in alphabetical order*** <br />
 -- Aware that items can be sorted by .sort. Mutate array using sort! <br />
-***Print array*** <br />
-***Test using different arrays as arguments*** <br />
+***Return array*** <br />
 
 ----------
 ----------
@@ -341,7 +320,6 @@ Note to self: Average number is sum of numbers, divided by number of items <br /
 ***How to isolate last number from others*** <br />
 -- Test if .last will isolate last item - this works <br />
 ***Return last item*** <br />
-***Test with different ranges as argument*** <br />
 ***Note -*** Refactored to remove each statement and replace with .to_a <br />
 ----------
 
@@ -357,7 +335,6 @@ How to compare between range types?
 ***Is there a square root method?*** <br />
 -- Google search returns Math.sqrt(x) <br />
 -- Replace x with number argument in square_root_of method <br />
-***Test using various numbers as arguments*** <br />
 
 ----------
 ----------
