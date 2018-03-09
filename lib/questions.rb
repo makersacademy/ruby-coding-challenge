@@ -67,7 +67,22 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
-  #NOTE TO SELF - come back to this
+  num = string.length
+  if num.odd?
+    halfnum = (num.to_f/2).ceil
+  else
+    halfnum = (num.to_f/2)
+  end
+
+  arr = string.chars.to_a
+  new_str = []
+
+  arr.each_with_index do |item, index|
+    if index < halfnum
+      new_str.push << [item]
+    end
+  end
+  puts new_str.join
 end
 
 #9 convert a symbol into a string
