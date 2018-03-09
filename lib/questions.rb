@@ -159,6 +159,7 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+  array.take_while { |element| element < 6}
 end
 
 # Question 25: get all the letters used in an array of words and return
@@ -166,6 +167,7 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+  array.join.split('').uniq.sort
 end
 
 # BONUS SECTION
