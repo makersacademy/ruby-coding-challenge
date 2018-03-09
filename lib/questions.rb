@@ -108,8 +108,17 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-
-#NOTE TO SELF - come back to this
+  arr = string.split
+    temp_arr = []
+    arr.each do |item|
+      if (item == "And") || (item == "A") || (item == "The") || (item =="and") || (item =="a") || (item =="the")
+        temp_arr << item.downcase
+      else
+        temp_arr << item.capitalize
+      end
+    end
+  temp_arr[0].capitalize!
+  temp_arr.join(" ")
 end
 
 
@@ -135,7 +144,17 @@ end
 
 #14 keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+  vowel_array = []
+  array.each do |item|
+    if item.start_with?("A","a","E","e","I","i","O","o","U","u")
+      vowel_array << item
+    end
+  end
+    return vowel_array.join(" ")
 end
+
+#got: "omar idriss angela"
+#expected: "omar idriss angela'"
 
 
 #15 remove instances of nil (but NOT false) from an array
@@ -165,7 +184,7 @@ end
 #18 discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
-  3.times {array.shift}
+  3.times{array.shift}
   array
 end
 
