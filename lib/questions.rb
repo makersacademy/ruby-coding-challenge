@@ -82,6 +82,18 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+    ignore = ['a', 'and', 'the']
+
+    words = string.split
+    words.each { |word| 
+        if not (ignore.include? word.downcase)
+            word[0] = word[0].upcase
+        end
+    }
+
+    result = words.join(" ");
+    result[0] = result[0].upcase
+    return  result
 end
 
 # return true if a string contains any special characters
