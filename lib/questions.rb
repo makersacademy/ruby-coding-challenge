@@ -19,7 +19,7 @@ end
 # stays negative
 def make_numbers_negative(number)
   # Unary Minus—Returns the receiver’s value, negated.
-  # Returns the absolute value of num
+  # abs Returns the absolute value of num
   -number.abs
 end
 
@@ -27,6 +27,8 @@ end
 # {'a' => 'b', 'c' => 'd'} becomes
 # {'b' => 'a', 'd' => 'c'}
 def swap_keys_and_values_in_a_hash(hash)
+  # Returns a new hash created by using hsh’s values as keys, and the keys as values.
+  hash.invert
 end
 
 # in a hash where the keys and values are all numbers
