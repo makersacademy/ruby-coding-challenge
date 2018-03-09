@@ -16,7 +16,7 @@
  - Repeated steps until the method returned expected results
 ----------
 **Note:**
- - Solution in questions_spec.rb appears to be incorrect with a rogue quotation mark
+ - Solution for #14 in questions_spec.rb appears to be incorrect, with a rogue quotation mark
 
 **Incomplete questions:**
  - 26, 30, 31, 32, 33, 34
