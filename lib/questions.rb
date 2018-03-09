@@ -1,14 +1,14 @@
 #1 round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
-  puts float.ceil
+  float.ceil
 end
 
 
 #2 round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
-  puts float.floor
+  float.floor
 end
 
 
@@ -16,10 +16,10 @@ end
 # stays negative
 def make_numbers_negative(number)
   if number < 0
-    puts number
+    return number
   elsif number > 0
-    puts -number
-  else puts "Your number is not positive or negative"
+    return -number
+  else return "Your number is not positive or negative"
   end
 end
 
@@ -28,7 +28,7 @@ end
 # {'a' => 'b', 'c' => 'd'} becomes
 # {'b' => 'a', 'd' => 'c'}
 def swap_keys_and_values_in_a_hash(hash)
-  puts hash.invert
+  hash.invert
 end
 
 
@@ -38,7 +38,7 @@ end
 def add_together_keys_and_values(hash)
   sum = 0
   hash.each {|k, v| sum += (k+v)}
-  puts sum
+  sum
 end
 
 
@@ -47,7 +47,7 @@ end
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
   my_hash = array.each_slice(2).to_a.to_h
-  puts my_hash
+  my_hash
 end
 
 
@@ -61,7 +61,7 @@ def remove_capital_letters_from_string(string)
       new_string += x
     end
   end
-    puts new_string
+    new_string
 end
 
 
@@ -84,13 +84,13 @@ def get_first_half_of_string(string)
       new_str.push << [item]
     end
   end
-  puts new_str.join
+  new_str.join
 end
 
 
 #9 convert a symbol into a string
 def turn_symbol_into_string(symbol)
-  puts symbol.to_s
+  symbol.to_s
 end
 
 
@@ -98,7 +98,7 @@ end
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
   new = email.partition("@").last
-  puts new.split(".com")
+  new.split(".com").join
 end
 
 
@@ -118,9 +118,9 @@ end
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
   if /\W/ === string
-    puts true
+    return true
   else
-    puts false
+    return false
   end
 end
 
@@ -129,7 +129,7 @@ end
 def select_elements_starting_with_a(array)
   a_array = []
   array.each {|x| a_array << [x] if (x[0] == "a") || (x[0] == "A")}
-  print a_array
+  a_array
 end
 
 
@@ -142,7 +142,7 @@ end
 def remove_nils_from_array(array)
   new_array = []
   array.each {|x| new_array << [x] if x != nil}
-  print new_array
+  new_array
 end
 
 
@@ -150,7 +150,7 @@ end
 def remove_nils_and_false_from_array(array)
   new_array = []
   array.each {|x| new_array << [x] if !(x.nil? || x==false)}
-  print new_array
+  new_array
 end
 
 
@@ -158,7 +158,7 @@ end
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
   array.each {|x| x.reverse!}
-  print array
+  array
 end
 
 
@@ -166,13 +166,13 @@ end
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
   3.times {array.shift}
-  print array
+  array
 end
 
 
 #19 add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
-  print array.unshift(element)
+  array.unshift(element)
 end
 
 
@@ -186,7 +186,7 @@ def shortest_word_in_array(array)
       shortest_word = x
     end
   end
-  puts shortest_word
+  shortest_word
 end
 
 
@@ -200,7 +200,7 @@ def longest_word_in_array(array)
       longest_word = x
     end
   end
-puts longest_word
+  longest_word
 end
 
 
@@ -209,7 +209,7 @@ end
 def total_of_array(array)
   total = 0
   array.each {|x| total +=x if x.is_a? Numeric}
-  puts total
+  total
 end
 
 
@@ -218,7 +218,7 @@ end
 def average_of_array(array)
   total = 0
   array.each {|x| total += x}
-  puts average = (total.to_f / array.length).round
+  average = (total.to_f / array.length).round
 end
 
 
@@ -232,7 +232,7 @@ def get_elements_until_greater_than_five(array)
     break if x > 5
     new_array << [x]
   end
-  print new_array
+  new_array
 end
 
 
@@ -243,7 +243,7 @@ end
 def get_all_letters_in_array_of_words(array)
   new_array = []
   array.each {|i| new_array += i.chars.to_a}
-  print new_array.sort!
+  new_array.sort!
 end
 
 
@@ -253,6 +253,7 @@ end
 #26 take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
+  #incomplete
 end
 
 
@@ -260,7 +261,7 @@ end
 # should return 20
 def get_upper_limit_of(range)
   range_array = range.to_a
-  puts range_array.last
+  range_array.last
 end
 
 
@@ -272,17 +273,18 @@ end
 
 #29 get the square root of a number
 def square_root_of(number)
-  puts Math.sqrt(number)
+  Math.sqrt(number)
 end
 
 
 
-  --- tougher ones ---
+  # --- tougher ones ---
 
 #30 call an arbitrary method from a string. so if I
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+  #incomplete
 end
 
 
@@ -290,6 +292,7 @@ end
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
+  #incomplete
 end
 
 
@@ -298,11 +301,13 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+  #incomplete
 end
 
 
 #33 count the number of words in a file
 def word_count_a_file(file_path)
+  #incomplete
 end
 
 
@@ -312,4 +317,5 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+  #incomplete
 end
