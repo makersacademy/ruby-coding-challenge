@@ -279,8 +279,7 @@ end
 #27 get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
-  range_array = range.to_a
-  range_array.last
+  range.last
 end
 
 
