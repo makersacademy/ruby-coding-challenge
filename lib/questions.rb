@@ -18,6 +18,9 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+  # Unary Minus—Returns the receiver’s value, negated.
+  # Returns the absolute value of num
+  -number.abs
 end
 
 # swap the keys and values in a hash. e.g.
