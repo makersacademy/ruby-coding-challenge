@@ -110,13 +110,15 @@ Return strings
 Test with different arguments
 
 
-#Q12
-#TO COMPLETE
-Split string in by characters - into an array
-Identify special characters - anything that isn't alphanumeric -
-Use if else statement to identify if array contains identified special characters.
-If yes, return true. If not return false
-Not familiar with regex, but Google search shows how to identify alphanumeric characters http://bit.ly/2IdbtaH
+#Q12 - first draft
+Identify special characters (not alphanumeric)
+- Google search returns Stack overflow link with /\W/ === string for comparing a string (http://bit.ly/2FoBO8b)
+- this works
+Assess each letter to check for special characters
+- no longer needed
+Return true if string contains special characters
+- use if statement here
+Test with different arguments
 
 
 #Q13 - first draft
