@@ -150,7 +150,7 @@ def select_elements_starting_with_vowel(array)
       vowel_array << item
     end
   end
-    return vowel_array.join(" ")
+    vowel_array.join(" ")
 end
 
 #got: "omar idriss angela"
