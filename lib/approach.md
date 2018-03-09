@@ -123,7 +123,8 @@ Test with different arguments
 
 #Q13 - first draft
 Check each array element and check first character of value
-- Iterate over each item (.each), isolating the first character (bracket notation)
+- Iterate over each item (.each)
+- Isolate the first character (bracket notation)
 Assess whether character at index 0 is "a" or "A"
 - Use if statement with or
 If true, add the array element to a new array.
@@ -134,6 +135,14 @@ Test with different array elements in argument
 
 #Q14
 #TO COMPLETE
+
+determine vowels to check for
+- create new array alled vowels
+check first letter in item in array, see if it matches any of the items in vowels
+if it does, add to new_array, if not, disregard it
+
+
+
 Similar approach to previous question
 Go over each item in array, isolating the first character (bracket notation)
 Each wouldn't work here, as we don't need to go through each letter
@@ -273,9 +282,23 @@ Test using different arrays as arguments
 BONUS QUESTIONS
 #Q26
 
-#Q27
+#Q27 - first draft
+What does a 2 dot range return?
+- Returns all numbers in range including first and last number
+How to isolate numbers in range from each other?
+- try isolating each number
+- Use an array for this in combination with .each
+How to isolate last number from others
+- Test if .last will isolate last item - this works
+Return last item
+Test with different ranges as argument
+Refactored to remove each statement and replace with .to_a
 
-#Q28
+
+#Q28 - first draft
+Note: 2 dot range returns all numbers in range. 3 dot does not return last number
+How to compare between range types?
+
 
 
 #Q29 - first draft
