@@ -47,7 +47,6 @@ end
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
   my_hash = array.each_slice(2).to_a.to_h
-  my_hash
 end
 
 
@@ -58,7 +57,7 @@ def remove_capital_letters_from_string(string)
   new_string = ""
   string_split.each do |char|
     if char == char.downcase
-      new_string += char
+      new_string << char
     end
   end
     new_string
@@ -81,7 +80,7 @@ def get_first_half_of_string(string)
 
   arr.each_with_index do |item, index|
     if index < halfnum
-      new_str.push << [item]
+      new_str << [item]
     end
   end
   new_str.join
@@ -111,7 +110,7 @@ def titleize_a_string(string)
   arr = string.split
     temp_arr = []
     arr.each do |item|
-      if (item == "And") || (item == "A") || (item == "The") || (item =="and") || (item =="a") || (item =="the")
+      if item =="and" || item =="a" || item =="the"
         temp_arr << item.downcase
       else
         temp_arr << item.capitalize
@@ -168,7 +167,7 @@ end
 #16 remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
   new_array = []
-  array.each {|item| new_array << item if !(item.nil? || item==false)}
+  array.each {|item| new_array << item if !(item.nil? || item == false)}
   new_array
 end
 
@@ -177,7 +176,6 @@ end
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
   array.each {|item| item.reverse!}
-  array
 end
 
 
@@ -272,7 +270,7 @@ end
 #26 take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
-  #incomplete
+  #Incomplete
 end
 
 
