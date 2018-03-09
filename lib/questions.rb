@@ -112,6 +112,10 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+    vowels = array.select { |item|
+        ['a', 'e', 'i', 'o', 'u'].include? item[0].downcase
+    }
+    return vowels.join(" ")
 end
 
 
