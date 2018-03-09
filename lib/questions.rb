@@ -30,24 +30,35 @@ end
 # {'a' => 'b', 'c' => 'd'} becomes
 # {'b' => 'a', 'd' => 'c'}
 def swap_keys_and_values_in_a_hash(hash)
+  # swap values - documentation - .invert
+  hash.invert
 end
 
 # in a hash where the keys and values are all numbers
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
+  # ASSUMPTION: all keys and values are numbers - can we refactor with error testing?
+  # Documentation - can we add/sum everything in a hash? Enumerable suggests so.
+  hash.sum {|k, v| k + v}
 end
 
 # turn an array (with an even number of elements) into a hash, by
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+  # splat array into Hash()
+  # todo: find why this requires [] rather than ()
+  Hash[*array]
 end
 
 
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+  # step 1: identify capitals
+  # step 2: remove capitals
+  string.gsub(/[A-Z]/, "")
 end
 
 
