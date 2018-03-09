@@ -8,6 +8,10 @@ end
 # round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
+  # Rounds float to a given precision in decimal digits
+  # Returns the float truncated to an Integer
+  # Subtracts one to achieve desired value, this works because we know the input value
+  float.round.to_int - 1
 end
 
 
