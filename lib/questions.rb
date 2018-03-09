@@ -230,7 +230,7 @@ def get_elements_until_greater_than_five(array)
   new_array=[]
   array.each do |x|
     break if x > 5
-    new_array << [x]
+    new_array << x
   end
   new_array
 end
