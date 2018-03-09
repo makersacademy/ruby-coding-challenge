@@ -37,9 +37,11 @@ end
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
   new_array = []
-  while array.length > 0 do
-    new_array.push(array.pop(2))
-  end
+  # while array.length > 0 do
+  #   new_array.push(array.pop(2))
+  # end
+  # to avoid using 'while'
+  array.each_slice(2) { |pair| new_array.push(pair) }
   new_array.to_h
 end
 
@@ -79,6 +81,13 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  exceptions = ['the', 'a', 'and']
+  words = string.split(' ')
+  words.each do |word|
+    word.capitalize! unless exceptions.include?(word)
+  end
+  words[0].capitalize!
+  words.join(' ')
 end
 
 # Question 12: return true if a string contains any special characters
