@@ -104,7 +104,11 @@ end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+    array.select { |item|
+        item[0] == 'a'
+    }
 end
+
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
