@@ -217,8 +217,8 @@ def is_a_3_dot_range?(range)
     return range.to_s.include?("...")
 end
 
-# get the square root of a number
 def square_root_of(number)
+    return Math.sqrt(number)
 end
 
 # --- tougher ones ---
