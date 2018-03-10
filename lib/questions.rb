@@ -43,6 +43,9 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+  # Compute a hash-code for this array.
+  # Returns a new array that is a one-dimensional flattening of self (recursively)
+  Hash[*array.flatten]
 end
 
 
