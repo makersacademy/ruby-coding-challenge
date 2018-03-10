@@ -85,8 +85,9 @@ def check_a_string_for_special_characters(string)
 	string.scan(/\W/) 	
 end
 
-# keep only the elements that start with an a
+#13 keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+	array.select {| i | i[0] == "a"}	
 end
 
 # keep only the elements that start with a vowel
