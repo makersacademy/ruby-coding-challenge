@@ -96,9 +96,9 @@ def select_elements_starting_with_vowel(array)
 	array.select{|i| i[0].match(/^[aeiou]/)}	
 end
 
-
-# remove instances of nil (but NOT false) from an array
+#15 remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
+	array.compact!	
 end
 
 # remove instances of nil AND false from an array
