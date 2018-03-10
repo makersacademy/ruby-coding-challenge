@@ -43,7 +43,8 @@ end
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
-  string.scan(/[a-z]|[ ]/).join
+  # string.scan(/[a-z]|[ ]/).join
+  string.delete("A-Z")
 end
 
 
@@ -57,6 +58,7 @@ end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+  symbol.to_s
 end
 
 
