@@ -94,11 +94,13 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+  # don't we all love regex
   !string[/\W/].nil?
 end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+  array.delete_if{!item.starts_with?("a")}
 end
 
 # keep only the elements that start with a vowel
