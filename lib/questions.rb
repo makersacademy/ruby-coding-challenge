@@ -209,7 +209,7 @@ def get_elements_until_greater_than_five(array)
     break if num > 5
     new_array << num
   end
-  new_array
+  array = new_array
 end
 
 
@@ -230,7 +230,7 @@ end
 #26 take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
-  #Incomplete
+  date.strftime("%d/%m/%Y")
 end
 
 
