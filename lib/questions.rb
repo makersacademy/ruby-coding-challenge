@@ -232,8 +232,12 @@ end
 def your_birthday_is_on_a_friday_in_the_year(birthday)
 end
 
-# count the number of words in a file
+#T4 count the number of words in a file
 def word_count_a_file(file_path)
+	text = File.open("sample.txt", "r") # r read-only
+	number_of_words = 0
+	text.each_line(){ |line| number_of_words = number_of_words + line.split.length }
+	number_of_words	
 end
 
 
