@@ -191,18 +191,16 @@ def total_of_array(array)
   array.reduce(:+)
 end
 
-# total = 0
-# array.each {|num| total +=num if num.is_a? Numeric}
-# total
-
 
 #23 get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
-  total = 0
-  array.each {|num| total += num}
-  average = (total.to_f / array.length).round
+  (array.reduce(:+).to_f / array.length).round
 end
+
+# total = 0
+# array.each {|num| total += num}
+# average = (total.to_f / array.length).round
 
 
 #24 get all the elements in an array, up until the first element
