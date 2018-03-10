@@ -175,13 +175,13 @@ end
 
 #20 return the shortest word in an array
 def shortest_word_in_array(array)
-  array.min {|item_1, item_2| item_1.length <=> item_2.length}
+  array.min_by {|item| item.length}
 end
 
 
 #21 return the longest word in an array
 def longest_word_in_array(array)
-  array.max {|item_one, item_two| item_one.length <=> item_two.length}
+  array.max_by {|item| item.length}
 end
 
 
@@ -197,10 +197,6 @@ end
 def average_of_array(array)
   (array.reduce(:+).to_f / array.length).round
 end
-
-# total = 0
-# array.each {|num| total += num}
-# average = (total.to_f / array.length).round
 
 
 #24 get all the elements in an array, up until the first element
