@@ -32,10 +32,11 @@ def add_together_keys_and_values(hash)
 	newArray.inject(:+)	
 end
 
-# turn an array (with an even number of elements) into a hash, by
+#6 turn an array (with an even number of elements) into a hash, by
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array) 
+	newHash = Hash[*array]	
 end
 
 
