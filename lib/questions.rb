@@ -86,6 +86,9 @@ end
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  at_split = email.split("@") # split the string on the @ symbol
+  dot_split = at_split[1].split(".") # split it again on the .
+  dot_split[0] # return the domain
 end
 
 # capitalize the first letter in each word of a string,
@@ -94,29 +97,75 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  # step 1: split string / make string iterable
+  string_words = string.split
+  # step 2: capitalise the first letter unless 'a, 'and' or 'the'
+  array_titilised = [] # create an empty array to hold the string
+  string_words.each do |word|
+    if word == "a" || word == "and" || word == "the"
+      array_titilised << word
+    else
+      array_titilised << word.capitalize
+    end
+  end
+  # step 3: capitalise the first word in the string regardless
+  array_titilised[0] = array_titilised[0].capitalize
+  # step 4: finish up by returning joined string
+  array_titilised.join(" ")
 end
 
 # return true if a string contains any special characters
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+  # Step 1: define NOT valid characters (a-z, A-Z and 0-9)
+  # Lots of regexp learning for this one!
+  /[^a-zA-Z0-9]/ === string
 end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+  a_array = []
+  array.each do |element|
+    if element.start_with?("a")
+      a_array << element
+    end
+  end
+  a_array
 end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+  a_array = []
+  array.each do |element|
+    if element.start_with?("a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
+      a_array << element
+    end
+  end
+  a_array
 end
 
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
+  a_array = []
+  array.each do |element|
+    if element != nil
+      a_array << element
+    end
+  end
+  a_array
 end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
+  a_array = []
+  array.each do |element|
+    if element != nil || element != false
+      a_array << element
+    end
+  end
+  a_array
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
