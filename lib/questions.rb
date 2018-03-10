@@ -138,10 +138,6 @@ def select_elements_starting_with_a(array)
   array.delete_if {|item| item[0] != "a"}
 end
 
-# a_array = []
-# array.each {|item| a_array << item if (item[0] == "a") || (item[0] == "A")}
-# a_array
-
 
 #14 keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
@@ -160,9 +156,7 @@ end
 
 #15 remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
-  new_array = []
-  array.each {|item| new_array << item if item != nil}
-  new_array
+  array.delete_if {|item| item == nil}
 end
 
 
