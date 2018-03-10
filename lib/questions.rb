@@ -135,10 +135,12 @@ end
 
 #13 keep only the elements that start with an a
 def select_elements_starting_with_a(array)
-  a_array = []
-  array.each {|item| a_array << item if (item[0] == "a") || (item[0] == "A")}
-  a_array
+  array.delete_if {|item| item[0] != "a"}
 end
+
+# a_array = []
+# array.each {|item| a_array << item if (item[0] == "a") || (item[0] == "A")}
+# a_array
 
 
 #14 keep only the elements that start with a vowel
