@@ -35,6 +35,8 @@ end
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
+  # Call block once for each value and key in hsh, use sum at the end.
+  hash.each_value.sum + hash.each_key.sum
 end
 
 # turn an array (with an even number of elements) into a hash, by
