@@ -14,9 +14,12 @@
  - If yes, I proceeded to the next mini problem
  - If not, I revisited the mini problem and researched an alternative solution.
  - Repeated steps until the method returned expected results
+
+**Refactoring**
+ - Read through all methods for specified object type, searching for shorter replacements for my current solutions
 ----------
 **Note:**
- - Solution for #14 in questions_spec.rb appears to be incorrect, with a rogue quotation mark
+ - Solution for Q14 in questions_spec.rb appears to be incorrect with a rogue quotation mark
 
 **Incomplete questions:**
  - 26, 30, 31, 32, 33, 34
