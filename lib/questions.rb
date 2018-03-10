@@ -69,12 +69,22 @@ def get_domain_name_from_email_address(email)
 	domain = email.split("@").last	
 end
 
-# capitalize the first letter in each word of a string,
+#11 capitalize the first letter in each word of a string,
 #  except 'a', 'and' and 'the'
 # *unless* they come at the start of the start of the string, e.g.
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+	string = "a day in london this is caterina the espresso lover"
+	#string.split.map(&:capitalize).join(" ")
+	#map(&:capitalize) is exactly the same as map { |x| x.capitalize }.
+
+	ignore = ["a", "the", "and"]
+	newArray = string.split(" ").each{ |word| (ignore.include? word.downcase) ? 
+                                word.downcase! : word.capitalize! }
+
+	newArray[0].capitalize!
+	newArray.join(" ")	
 end
 
 #12 return true if a string contains any special characters
@@ -194,9 +204,6 @@ def is_a_3_dot_range?(range)
 	Range.new(a, b)
 	(a...b).exclude_end?
 end
-
-
-
 
 #B4 get the square root of a number
 def square_root_of(number)
