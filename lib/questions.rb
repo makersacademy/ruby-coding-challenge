@@ -89,10 +89,14 @@ end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+    array.select{|i| i.start_with?("a") }
 end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+  vowel = %w[a e i o u]
+  array.select {|i| i.start_with?("a", "e", "i", "o", "u")}.join(" ")
+  
 
 end
 
