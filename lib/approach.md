@@ -18,7 +18,7 @@
 
 * I will try the bonus 
 
-* I fixed a mistake on the test 
+* I think there is a mistake on the test 
 ```ruby
    it 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel %w[john david omar fred idriss angela]
