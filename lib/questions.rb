@@ -137,8 +137,10 @@ def shortest_word_in_array(array)
 	array[0] #italy	
 end
 
-# return the shortest word in an array
+#21 return the longest word in an array
 def longest_word_in_array(array)
+	#cty = ["italy", "america", "United Kingdom", "canada", "australia", "estonia"]
+	array.sort_by! {|item| item.size}.last(1) #united kingdom	
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
