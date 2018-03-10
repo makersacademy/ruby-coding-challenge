@@ -2,6 +2,10 @@
 
 * Using irb for command line testing of each test
 * Checking questions_spec.rb for test requirements
+* Using the docs
+https://ruby-doc.org/core-2.5.0/Array.html
+https://ruby-doc.org/core-2.5.0/String.html
+
 
 **Q6. Summing hash keys and values** 
 
@@ -50,5 +54,10 @@ Had issues doing this one. Need to come back to understand it better.
 
 * Similar to solution for *keep only the elements that start with an a* 
 * Had to amend test in questions_spec, there was an erroneous ' character that caused the test to fail
+* Tried to make a solution using a vowel array but couldn't work how out to compare TODO https://stackoverflow.com/questions/20205023/ruby-find-element-not-in-common-for-two-arrays looks like I am being too complex! 
+* could use regex instead of hard-coding the values in the starts_with() method
 
+**remove instances of nil (but NOT false) from an array** 
+https://stackoverflow.com/a/29277773
+This looks like the simplest solution I can find
 

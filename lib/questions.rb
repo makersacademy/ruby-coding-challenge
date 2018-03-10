@@ -96,22 +96,28 @@ end
 def select_elements_starting_with_vowel(array)
   vowel = %w[a e i o u]
   array.select {|i| i.start_with?("a", "e", "i", "o", "u")}.join(" ")
-  
-
 end
-
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
+  array.compact
 end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
+  array.select{
+    |item|
+    item != false && item != nil
+  }
+
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
+  array.each {
+    |element| element.reverse!
+  }
 end
 
 # discard the first 3 elements of an array,
