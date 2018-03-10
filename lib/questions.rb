@@ -77,10 +77,12 @@ end
 def titleize_a_string(string)
 end
 
-# return true if a string contains any special characters
+#12 return true if a string contains any special characters
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+	#str = "What do you s@y about <London>?"
+	string.scan(/\W/) 	
 end
 
 # keep only the elements that start with an a
