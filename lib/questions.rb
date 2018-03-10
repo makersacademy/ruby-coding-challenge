@@ -161,7 +161,7 @@ end
 def remove_nils_and_false_from_array(array)
   a_array = []
   array.each do |element|
-    if element != nil || element != false
+    if element != nil && element != false
       a_array << element
     end
   end
@@ -171,33 +171,44 @@ end
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
+  array.each { |element| element.reverse! }
 end
 
 # discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+  array.drop(3)
 end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
+  array.unshift(element)
 end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
+  array.min { |a, b| a.length <=> b.length }
 end
 
-# return the shortest word in an array
+# return the [shortest] word in an array
+# ^-- presuming the above is a typo (function says longest)
 def longest_word_in_array(array)
+  array.max { |a, b| a.length <=> b.length }
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+  array.sum
 end
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
+  # combining some other code questions together to product result :)
+  # step 1: create a float of the mean average
+  # step 2: round up and convert to int
+  (array.sum.to_f / array.count.to_f).ceil.to_i
 end
 
 # get all the elements in an array, up until the first element
@@ -205,6 +216,18 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+  # note - I feel this code could be cleaner :(
+  # step 1: iterate over array
+  # step 2: stop when >5
+  final_array = []
+  array.each do |num|
+    if num <= 5
+      final_array << num
+    else
+      break
+    end
+  end
+  final_array
 end
 
 # get all the letters used in an array of words and return
@@ -212,6 +235,11 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+  # step 1 : split array into letters
+  char_array = []
+  array.each { |word| char_array << word.split(//) }
+  # step 2: reduce to uniques & sort
+  sorted_array = char_array.flatten.uniq.sort
 end
 
 # BONUS SECTION
