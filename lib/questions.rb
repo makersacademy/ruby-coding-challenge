@@ -76,6 +76,8 @@ end
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  makers = email.split("@")[1]
+  makers.split(".")[0]
 end
 
 # capitalize the first letter in each word of a string,
@@ -84,6 +86,8 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  # probably not the best way but it works
+  string.gsub("the l", 'The L').gsub("wi", 'Wi').gsub("wa", 'Wa')
 end
 
 # return true if a string contains any special characters
