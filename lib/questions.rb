@@ -130,8 +130,11 @@ def add_element_to_beginning_of_array(array, element)
 	array.unshift(element)	
 end
 
-# return the shortest word in an array
+#20 return the shortest word in an array
 def shortest_word_in_array(array)
+	#cty = ["italy", "america", "britain", "canada", "australia", "estonia"]	
+	array.sort_by! {|item| item.size } #sort elements by length: the shortest comes first
+	array[0] #italy	
 end
 
 # return the shortest word in an array
