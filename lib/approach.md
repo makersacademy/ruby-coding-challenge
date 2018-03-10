@@ -32,6 +32,7 @@
 
   ```
 
+* I used a lot **google**,  the **official documentation** and **stackoverflow** 
 
 
 * END - HAPPY! || HAPPY END!
