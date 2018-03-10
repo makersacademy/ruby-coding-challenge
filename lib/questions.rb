@@ -164,11 +164,13 @@ def get_elements_until_greater_than_five(array)
 	array.take_while {|item| item < 6}	
 end
 
-# get all the letters used in an array of words and return
+#25 get all the letters used in an array of words and return
 # it as a array of letters, in alphabetical order
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+	#cty = ["italy", "america", "britain", "canada", "australia", "estonia"]
+	array.join.chars.sort	
 end
 
 # BONUS SECTION
