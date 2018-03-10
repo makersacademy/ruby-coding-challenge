@@ -115,9 +115,12 @@ def reverse_every_element_in_array(array)
 	array.map{|i| puts i.reverse}	
 end
 
-# discard the first 3 elements of an array,
+#18 discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+	#fruits = ["apple", 2, "orange", "banana", "kiwi", 6, 7, "grape"]
+	array.slice!(3, array.length) #two solutions again?
+	array.drop(3)
 end
 
 # add an element to the beginning of an array
