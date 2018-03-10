@@ -123,28 +123,34 @@ end
 # discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+  array[((array.length ) / 2)..-1]
 end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
+  array.unshift(element)
 end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
+  array.sort_by{ |a| a.length}[0]
 end
 
 # return the shortest word in an array
 def longest_word_in_array(array)
+  array.sort_by{ |a| a.length}[-1]
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+  array.sum
 end
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
+  (array.sum.to_f / array.length.to_f).ceil
 end
 
 # get all the elements in an array, up until the first element

@@ -5,7 +5,7 @@
 * Using the docs
 https://ruby-doc.org/core-2.5.0/Array.html
 https://ruby-doc.org/core-2.5.0/String.html
-
+* Remembered that ! has a big effect on methods
 
 **Q6. Summing hash keys and values** 
 
@@ -61,3 +61,12 @@ Had issues doing this one. Need to come back to understand it better.
 https://stackoverflow.com/a/29277773
 This looks like the simplest solution I can find
 
+**remove instances of nil AND false from an array**
+https://stackoverflow.com/questions/252203/checking-if-a-variable-is-not-nil-and-not-zero-in-ruby
+* tried to use a similar solution to the above but it doesn't work how I though
+* Found way to check if variable is nil
+
+**discard the first 3 elements of an array**
+* This seemed to easy to be proper solution
+array[((array.length ) / 2)..-1]
+* I think it should still involve delete or push
