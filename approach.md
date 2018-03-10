@@ -24,4 +24,23 @@ Needed to do (.length - 1) as the array starts from 0  which gave the wrong valu
 May need to check to ceil this value? 
 
 **Q9. Symbol to String**
+
 to_s
+
+**Q10 Return domain name from email address**
+
+Few different approaches to this problem.
+
+1. Remove everything before the @ symbol using .slice and .index 
+2. Remove everything from the .com
+
+Practised a lot with String methods here to find different ways to do it. 
+
+**Q11 Titalize a string**
+
+Found string literals
+%w[] produces a word array, using this for ignores
+
+1. Split String into Words
+2. Check if Words are to be ignored?
+3. Capitalize words

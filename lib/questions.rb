@@ -74,12 +74,17 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  ignore_words = %w[and is the]
+  words = string.split(/\W+/)
+  words.each_with_index.map{|word, index| ignore_words.include?(word) && index > 0 ? word : word.capitalize}.join(" ")
+  
 end
 
 # return true if a string contains any special characters
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+  string.match?(/\W+/)
 end
 
 # keep only the elements that start with an a
@@ -88,6 +93,7 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+
 end
 
 
