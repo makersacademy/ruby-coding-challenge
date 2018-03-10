@@ -188,10 +188,15 @@ def get_upper_limit_of(range)
 	range.max
 end
 
-# should return true for a 3 dot range like 1...20, false for a
+#B3 should return true for a 3 dot range like 1...20, false for a
 # normal 2 dot range
 def is_a_3_dot_range?(range)
+	Range.new(a, b)
+	(a...b).exclude_end?
 end
+
+
+
 
 #B4 get the square root of a number
 def square_root_of(number)
@@ -210,6 +215,7 @@ end
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
+
 end
 
 # given your birthday this year, this method tells you
