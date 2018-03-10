@@ -191,8 +191,9 @@ end
 def is_a_3_dot_range?(range)
 end
 
-# get the square root of a number
+#B4 get the square root of a number
 def square_root_of(number)
+	Math.sqrt(number)
 end
 
 # --- tougher ones ---
