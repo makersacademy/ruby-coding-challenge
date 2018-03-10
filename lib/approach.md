@@ -16,7 +16,7 @@
  - Repeated steps until the method returned expected results
 
 **Refactoring**
- - Read through all methods for specified object type, searching for shorter replacements for my current solutions
+ - Reading Enumerable and Ruby docs thoroughly, searching for shorter replacements for my current solutions
 ----------
 **Note:**
  - Solution for Q14 in questions_spec.rb appears to be incorrect with a rogue quotation mark
