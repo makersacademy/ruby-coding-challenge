@@ -61,7 +61,7 @@ def convert_array_to_a_hash(array)
   arr = array.each_slice(2).to_a
   hash = arr.to_h
 end
-#convert_array_to_a_hash([enter array here])
+#convert_array_to_a_hash(enter array here)
 
 
 # take out all the capital letters from a string
@@ -69,7 +69,7 @@ end
 def remove_capital_letters_from_string(string)
    string.tr_s('A-Z','')
 end
-#remove_capital_letters_from_string(#insert string here)
+#remove_capital_letters_from_string(insert string here)
 
 
 # cut strings in half, and return the first half, e.g.
@@ -93,13 +93,13 @@ end
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
-  commrem = email.gsub(/.com.*/, '')
-  commrem.length
-  arr = commrem.split('@').to_a
+  commRem = email.gsub(/.com.*/, '')
+  commRem.length
+  arr = commRem.split('@').to_a
   domain = arr.pop
   puts domain
 end
-#get_domain_name_from_email_address('insert .com E-Mail here')
+#get_domain_name_from_email_address(insert .com E-Mail here)
 
 # capitalize the first letter in each word of a string,
 #  except 'a', 'and' and 'the'
@@ -107,8 +107,17 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  skipIt = ['and', 'And', 'the', 'The',  'a', 'A']
+  string = string.downcase!
+  arr = string.split(' ').map { |word| skipIt.include?(word) ? word :
+  word.capitalize }.join(' ')
 
+  reStrung = arr.split(' ')[0].capitalize
+  nowTitle = arr.split(' ')[1..-1].unshift(reStrung).join(' ')
+  finalTitle = nowTitle
+  puts finalTitle
 end
+#titleize_a_string(insert string here)
 
 # return true if a string contains any special characters
 # where 'special character' means anything apart from the letters
@@ -120,24 +129,27 @@ def check_a_string_for_special_characters(string)
     puts  false
   end
  end
-#check_a_string_for_special_characters('string here')
+#check_a_string_for_special_characters(insert string here)
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
-
+  newArr = array.select { |word| word.start_with?('a') }
+  puts newArr
 end
+#select_elements_starting_with_a(insert array here)
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-
+  newArr = array.select { |word| word.start_with?(/[aeiou]/) }
+  puts newArr
 end
-
+#select_elements_starting_with_vowel(insert array here)
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
   clean = array.compact
 end
-#remove_nils_from_array([insert array here])
+#remove_nils_from_array(insert array here)
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
@@ -147,7 +159,7 @@ def remove_nils_and_false_from_array(array)
  arr1 = arr.delete('false')
  newArr = arr.to_a
 end
-#remove_nils_and_false_from_array([insert array here])
+#remove_nils_and_false_from_array(insert array here)
 
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
@@ -155,6 +167,7 @@ def reverse_every_element_in_array(array)
   str = array.join(' ').reverse
   arr = str.split(' ')
 end
+#reverse_every_element_in_array(insert array here)
 
 # discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
@@ -211,6 +224,7 @@ end
 def get_elements_until_greater_than_five(array)
   array.take_while { |i| i < 6 }
 end
+#get_elements_until_greater_than_five(insert array here)
 
 # get all the letters used in an array of words and return
 # it as a array of letters, in alphabetical order
@@ -273,7 +287,7 @@ def word_count_a_file(file_path)
   file_path{ |f|
   f.chunk { |line| line.ord }.each { |ch, lines| p [ch.chr, lines.length] }}
 end
-#word_count_a_file()
+#word_count_a_file(file_path here)
 
 
 # in a file, total the number of times words of different lengths
