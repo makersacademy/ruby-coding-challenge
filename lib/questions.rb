@@ -57,8 +57,9 @@ def get_first_half_of_string(string)
 	string[0, i + 1]	
 end
 
-# convert a symbol into a string
+#9 convert a symbol into a string
 def turn_symbol_into_string(symbol)
+	symbol.to_s	
 end
 
 
