@@ -133,15 +133,9 @@ end
 
 #14 keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-  vowel_array = []
-  array.each do |item|
-    if item.start_with?("A","a","E","e","I","i","O","o","U","u")
-      vowel_array << item
-    end
-  end
-    array = vowel_array.join(" ")
+  array.keep_if {|item| item[0] =~/[aeiou]/}
+  array.join (" ")
 end
-
 #Note:
 #got: "omar idriss angela"
 #expected: "omar idriss angela'"
