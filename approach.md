@@ -22,6 +22,9 @@
  - Solution for Q14 in questions_spec.rb appears to be incorrect with a rogue quotation mark
 
 **Incomplete questions:**
- - 26, 30, 31, 32, 33, 34
+ - 30, 31, 32, 33, 34
+
+**Tweet**
+[https://twitter.com/heyellej/status/97243515447512678(https://twitter.com/heyellej/status/972435154475126784)
 <br/>
 Danielle (Elle) H.
