@@ -181,9 +181,11 @@ def format_date_nicely(date)
 	date.strftime("%d/%m/%y")	
 end
 
-# get the upper limit of a range. e.g. for the range 1..20, you
+#B2 get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
+	#range = [1,2,3,4,5,6,7,8,9,10]
+	range.max
 end
 
 # should return true for a 3 dot range like 1...20, false for a
