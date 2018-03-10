@@ -190,15 +190,7 @@ end
 
 #20 return the shortest word in an array
 def shortest_word_in_array(array)
-  shortest_num = array[0].length
-  shortest_word = array[0]
-  array.each do |word|
-    if word.length < shortest_num
-      shortest_num = word.length
-      shortest_word = word
-    end
-  end
-  shortest_word
+  array.min {|item_1, item_2| item_1.length <=> item_2.length}
 end
 
 
