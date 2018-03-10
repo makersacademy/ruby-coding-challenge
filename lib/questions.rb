@@ -101,8 +101,10 @@ def remove_nils_from_array(array)
 	array.compact!	
 end
 
-# remove instances of nil AND false from an array
+#16 remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
+	#fruits = ["false", nil, "orange", nil, false, nil, "banana", "kiwi", false]
+	array.keep_if{|i|i}	
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
