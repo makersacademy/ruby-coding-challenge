@@ -109,7 +109,7 @@ def titleize_a_string(string)
       end
     end
   temp_arr[0].capitalize!
-  temp_arr.join(" ")
+  string = temp_arr.join(" ")
 end
 
 
@@ -118,9 +118,9 @@ end
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
   if /\W/ === string
-    return true
+    true
   else
-    return false
+    false
   end
 end
 
