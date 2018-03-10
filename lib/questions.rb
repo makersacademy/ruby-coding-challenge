@@ -60,8 +60,9 @@ def remove_capital_letters_from_string(string)
       new_string << char
     end
   end
-    new_string
+    string = new_string
 end
+
 
 
 #8 cut strings in half, and return the first half, e.g.
@@ -74,16 +75,7 @@ def get_first_half_of_string(string)
   else
     halfnum = (num.to_f/2)
   end
-
-  arr = string.chars.to_a
-  new_str = []
-
-  arr.each_with_index do |item, index|
-    if index < halfnum
-      new_str << [item]
-    end
-  end
-  new_str.join
+  string[0,halfnum]
 end
 
 
