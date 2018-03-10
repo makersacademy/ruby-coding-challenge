@@ -28,6 +28,10 @@ end
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
+  array = hash.to_a.flatten
+  sum = 0
+  array.each { |a| sum += a }
+  sum
 end
 
 # turn an array (with an even number of elements) into a hash, by
