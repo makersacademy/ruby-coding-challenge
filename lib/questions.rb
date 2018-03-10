@@ -147,9 +147,10 @@ def select_elements_starting_with_vowel(array)
       vowel_array << item
     end
   end
-    vowel_array.join(" ")
+    array = vowel_array.join(" ")
 end
 
+#Note:
 #got: "omar idriss angela"
 #expected: "omar idriss angela'"
 
@@ -203,15 +204,7 @@ end
 
 #21 return the longest word in an array
 def longest_word_in_array(array)
-  longest_num = 0
-  longest_word = ""
-  array.each do |word|
-    if word.length > longest_num
-      longest_num = word.length
-      longest_word = word
-    end
-  end
-  longest_word
+  array.max {|item_one, item_two| item_one.length <=> item_two.length}
 end
 
 
