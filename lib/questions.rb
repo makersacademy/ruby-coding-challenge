@@ -189,7 +189,7 @@ end
 # Bonus 1: take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
-  date.strftime("%d/%m/%Y")
+  date.strftime('%d/%m/%Y')
 end
 
 # Bonus 2: get the upper limit of a range. e.g. for the range 1..20, you
@@ -206,6 +206,7 @@ end
 
 # Bonus 4: get the square root of a number
 def square_root_of(number)
+  Math.sqrt(number)
 end
 
 # --- tougher ones ---
