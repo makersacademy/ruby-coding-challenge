@@ -226,11 +226,25 @@ def is_a_2018_bank_holiday?(date)
   bank_holidays.include?(date)
 end
 
-# given your birthday this year, this method tells you
+# Tougher 3: given your birthday this year, this method tells you
 # the next year when your birthday will fall on a friday
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
+  # First attempt below didn't account for leap years
+  # def your_birthday_is_on_a_friday_in_the_year(birthday)
+  #   while not birthday.friday? do
+  #     birthday += (60 * 60 * 24 * 365)
+  #   end
+  #   puts "The next time your birthday will be on a Friday is in #{birthday.year}"
+  #   birthday.year
+  # end
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+  year = birthday.year
+  while not Time.new(year, birthday.month, birthday.day).friday? do
+    year += 1
+  end
+  puts "The next time your birthday will be on a Friday is in #{year}"
+  year
 end
 
 # count the number of words in a file

@@ -183,8 +183,8 @@ describe 'bonus questions' do
   end
 
   it 'is_a_2018_bank_holiday?' do
-    a = is_a_2018_bank_holiday?(Time.new(2018, 8, 27))
-    b = is_a_2018_bank_holiday?(Time.new(2018, 8, 26))
+    a = is_a_2018_bank_holiday?(Time.new(2018, 8, 27)) # changed year from 2014 to 2018
+    b = is_a_2018_bank_holiday?(Time.new(2018, 8, 26)) # changed year from 2014 to 2018
 
     expect(a).to be true
     expect(b).to be false
@@ -192,7 +192,7 @@ describe 'bonus questions' do
 
   it 'your_birthday_is_on_a_friday_in_the_year' do
     n = your_birthday_is_on_a_friday_in_the_year(Time.new(2018, 1, 1))
-    expect(n).to eq 2020
+    expect(n).to eq 2021 # changed year to 2021 for test because 1.1.2020 is a Wednesday, and 1.1.2021 is a Friday
   end
 
   it 'word_count_a_file' do
