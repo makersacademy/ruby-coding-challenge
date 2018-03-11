@@ -247,8 +247,11 @@ def your_birthday_is_on_a_friday_in_the_year(birthday)
   year
 end
 
-# count the number of words in a file
+# Tougher 4: count the number of words in a file
 def word_count_a_file(file_path)
+  # text = open(file_path).read
+  # text.split(' ').length
+  open(file_path).read.split(' ').length
 end
 
 
