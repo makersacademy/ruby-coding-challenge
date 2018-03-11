@@ -15,12 +15,7 @@ end
 #3 turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
-  if number < 0
-    return number
-  elsif number > 0
-    return -number
-  else return "Your number is not positive or negative"
-  end
+  number < 0 ? number : -number
 end
 
 
@@ -36,9 +31,7 @@ end
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
-  sum = 0
-  hash.each {|key, value| sum += (key + value)}
-  sum
+  hash.flatten.reduce(:+)
 end
 
 
@@ -194,12 +187,7 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
-  new_array=[]
-  array.each do |num|
-    break if num > 5
-    new_array << num
-  end
-  array = new_array
+  array.take_while{|number| number < 6}
 end
 
 
