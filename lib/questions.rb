@@ -247,20 +247,24 @@ end
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
+  date.strftime("%d/%m/%Y")
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
+  range.last
 end
 
 # should return true for a 3 dot range like 1...20, false for a
 # normal 2 dot range
 def is_a_3_dot_range?(range)
+  range == (range.begin...range.end)
 end
 
 # get the square root of a number
 def square_root_of(number)
+  Math.sqrt(number)
 end
 
 # --- tougher ones ---
@@ -269,12 +273,23 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+  # Ruby documentation suggests this is something send() can do
+  eval str_method
 end
 
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
+  # This feels inelegant/manual but it gets the job done for now
+  d1 = Time.new(2018, 3, 30)
+  d2 = Time.new(2018, 4, 2)
+  d3 = Time.new(2018, 5, 7)
+  d4 = Time.new(2018, 5, 28)
+  d5 = Time.new(2018, 8, 27)
+  d6 = Time.new(2018, 12, 25)
+  d7 = Time.new(2018, 12, 26)
+  date == d1 || date == d2 || date == d3 || date == d4 || date == d5 || date == d6 || date == d7
 end
 
 # given your birthday this year, this method tells you
@@ -282,10 +297,21 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+  ## I think questions_spec.rb is incorrect here - 01/01/2020 is a Wednesday :)
+  ## Correct answer for an input of 01/01/2018 should be 2021
+  start_year = birthday
+  while start_year.friday? != true
+    start_year = start_year + (60*60*24*365)
+  end
+  start_year.year
 end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+  f = File.open(file_path, "r")
+  contents = f.read
+  f.close
+  contents.split.length
 end
 
 
@@ -295,4 +321,17 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+  f = File.open(file_path, "r")
+  contents = f.read
+  f.close
+  word_length = Hash.new(0)
+  contents.split.each do |word|
+    word_cleaned = word.gsub(/\W/, "")
+    if word_length[word_cleaned.length] == 0
+      word_length[word_cleaned.length] = 1
+    else
+      word_length[word_cleaned.length] += 1
+    end
+  end
+  word_length
 end
