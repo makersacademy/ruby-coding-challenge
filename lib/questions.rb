@@ -111,11 +111,7 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
-  if /\W/ === string
-    true
-  else
-    false
-  end
+  /\W/ === string ? true : false
 end
 
 
