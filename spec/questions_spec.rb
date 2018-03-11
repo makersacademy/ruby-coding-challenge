@@ -90,7 +90,7 @@ describe 'learning about arrays' do
 
   it 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel %w[john david omar fred idriss angela]
-    expect(n).to eq %[omar idriss angela']
+    expect(n).to eq %w[omar idriss angela]
   end
 
   it 'remove_nils_from_array' do
