@@ -90,7 +90,7 @@ describe 'learning about arrays' do
 
   it 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel %w[john david omar fred idriss angela]
-    expect(n).to eq %[omar idriss angela']
+    expect(n).to eq %w[omar idriss angela] # added %w and removed stray '
   end
 
   it 'remove_nils_from_array' do
@@ -183,8 +183,11 @@ describe 'bonus questions' do
   end
 
   it 'is_a_2018_bank_holiday?' do
-    a = is_a_2014_bank_holiday?(Time.new(2018, 8, 27))
-    b = is_a_2014_bank_holiday?(Time.new(2018, 8, 26))
+    #a = is_a_2014_bank_holiday?(Time.new(2018, 8, 27))
+    #b = is_a_2014_bank_holiday?(Time.new(2018, 8, 26))
+    # updated below to call is_a_2018_bank_holiday? function
+    a = is_a_2018_bank_holiday?(Time.new(2018, 8, 27))
+    b = is_a_2018_bank_holiday?(Time.new(2018, 8, 26))
 
     expect(a).to be true
     expect(b).to be false
@@ -192,7 +195,10 @@ describe 'bonus questions' do
 
   it 'your_birthday_is_on_a_friday_in_the_year' do
     n = your_birthday_is_on_a_friday_in_the_year(Time.new(2018, 1, 1))
-    expect(n).to eq 2020
+    #expect(n).to eq 2020
+    ## I think questions_spec.rb is incorrect here - 01/01/2020 is a Wednesday :)
+    ## Correct answer for an input of 01/01/2018 should be 2021?
+    expect(n).to eq 2021
   end
 
   it 'word_count_a_file' do
