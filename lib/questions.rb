@@ -149,6 +149,9 @@ end
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+  sum=0
+  array.each { |x| sum+=x }          # array.sum
+  return sum
 end
 
 # get the average from an array, rounded to the nearest integer
