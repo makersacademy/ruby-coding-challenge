@@ -105,6 +105,7 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+  array.delete_if{ |item| !item.start_with?('a','e','i','o','u')}.join(" ")
 end
 
 
