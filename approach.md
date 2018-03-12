@@ -25,6 +25,6 @@
  - 30, 31, 32, 33, 34
 
 **Tweet**
-[https://twitter.com/heyellej/status/97243515447512678(https://twitter.com/heyellej/status/972435154475126784)
+[https://twitter.com/heyellej/status/97243515447512678](https://twitter.com/heyellej/status/972435154475126784)
 <br/>
 Danielle (Elle) H.
