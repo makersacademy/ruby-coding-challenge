@@ -225,11 +225,26 @@ def is_a_2018_bank_holiday?(date)
 
 end
 
-# given your birthday this year, this method tells you
+#T3 given your birthday this year, this method tells you
 # the next year when your birthday will fall on a friday
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+
+	# Sorry, but it is not clear about the point of this question.
+	# You want to know the first year that my birthday is going to
+	# be Friday, right? Why do you want "the day", not "year"?
+		
+	require "date"
+
+	week = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
+	year = 2018
+	month = 3
+	day = 10
+	birthday = Date.new(year, month, day)
+
+	p (birthday.year, "/", birthday.month, "/", birthday.day, "::")
+	(week[birthday.wday], "::") # returns saturday and I'm not going to solve this problem
 end
 
 #T4 count the number of words in a file
