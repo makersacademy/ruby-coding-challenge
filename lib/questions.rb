@@ -212,10 +212,15 @@ end
 
 # --- tougher ones ---
 
-# call an arbitrary method from a string. so if I
+#T1 call an arbitrary method from a string. so if I
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+	method_name = "foobar"
+	obj.send(method_name) if obj.respond_to? method_name
+
+	# dynamic dispatch?
+	# to be honest, I'm not sure if this is the right answer
 end
 
 #T2 return true if the date is a uk bank holiday for 2014
