@@ -3,4 +3,6 @@ language: ruby
 script:
   bundle exec rspec
 notifications:
-    slack: makersacademy:tdRCm6lkIKMwzxXBaOh89Fh8
+    slack: ENV["STUDENT_SLACK_KEY"]
+    on_success: always
+    on_failure: never
