@@ -166,6 +166,8 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+  # not sure what I am meant to do here 2, 1, 3, and the first element is not greater that 5
+  array.delete_if{ |item| item > 5 }.take(6)
 end
 
 # get all the letters used in an array of words and return
