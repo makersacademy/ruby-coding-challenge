@@ -218,12 +218,17 @@ end
 def call_method_from_string(str_method)
 end
 
-# return true if the date is a uk bank holiday for 2014
+#T2 return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
-def is_a_2018_bank_holiday?(date)
 
-end
+def is_a_2018_bank_holiday?(date)
+	require "date"
+	d = Date.today
+	bh2014 = %w[01/01/2018 04/18/2018 04/21/2018 05/05/2018
+                05/26/2018 08/25/2018 12/25/2018 12/26/2018]
+	p bh2014.include?(d) # today is 12/03, so return false
+end	
 
 #T3 given your birthday this year, this method tells you
 # the next year when your birthday will fall on a friday
