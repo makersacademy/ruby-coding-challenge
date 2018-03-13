@@ -216,7 +216,21 @@ end
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
-def is_a_2018_bank_holiday?(date)
+def is_a_2014_bank_holiday?(date)
+  # icomplete needs more work
+  require 'date'
+  year = "2018"
+  holidays = ["/3/30", "/4/2", "/5/7", "/5/28", "/8/27", "/11/25", "/11/26"]
+  holidays.each {|hdate|
+    hdate = year + hdate
+    #hdate = Date.parse(hdate)
+    hdate = Date.strptime(hdate, "%Y,%m,%d")
+    if hdate != date
+      return hdate
+    elsif hdate == date
+      return true
+    end
+  }
 end
 
 # given your birthday this year, this method tells you
