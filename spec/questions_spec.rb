@@ -1,6 +1,7 @@
 require 'rspec'
 require 'questions'
 
+
 describe 'learning numbers :' do
 
   it 'round_up_number' do
@@ -14,11 +15,11 @@ describe 'learning numbers :' do
   end
 
   it 'make_numbers_negative' do
-    a = make_numbers_negative 5
-    b = make_numbers_negative -7
+    a = make_numbers_negative (5)
+    b = make_numbers_negative (-7)
 
-    expect(a).to eq -5
-    expect(b).to eq -7
+    expect(a).to eq (-5)
+    expect(b).to eq (-7)
   end
 
 end
@@ -90,7 +91,7 @@ describe 'learning about arrays' do
 
   it 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel %w[john david omar fred idriss angela]
-    expect(n).to eq %[omar idriss angela']
+    expect(n).to eq %[omar idriss angela]
   end
 
   it 'remove_nils_from_array' do
@@ -183,8 +184,8 @@ describe 'bonus questions' do
   end
 
   it 'is_a_2018_bank_holiday?' do
-    a = is_a_2014_bank_holiday?(Time.new(2018, 8, 27))
-    b = is_a_2014_bank_holiday?(Time.new(2018, 8, 26))
+    a = is_a_2018_bank_holiday?(Time.new(2018, 8, 27))
+    b = is_a_2018_bank_holiday?(Time.new(2018, 8, 26))
 
     expect(a).to be true
     expect(b).to be false
