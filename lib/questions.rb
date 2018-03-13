@@ -37,9 +37,9 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
-  # Hash[*array.flatten]
+  Hash[*array.flatten]
   # Hash(array)
-  array.to_h
+  # array.to_h
 
 end
 
