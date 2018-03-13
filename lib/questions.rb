@@ -1,13 +1,13 @@
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
-
+float.ceil
 end
 
 # round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
-
+float.floor
 end
 
 
@@ -16,7 +16,7 @@ end
 def make_numbers_negative(number)
   if number > 0
     number * -1
-  else number * 1
+  else return
   end
 end
 
@@ -68,7 +68,7 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-
+string.captialize.
 end
 
 # return true if a string contains any special characters
@@ -187,7 +187,7 @@ def word_count_a_file(file_path)
 end
 
 
-# in a file, total the number of times words of different lengths
+# in a file, total the number of times words of different lengthss
 # appear. So in a file with the text "the cat sat on the blue mat"
 # I have 5 words which are 3 letters long, 1 which is 2 letters long
 # and 1 that is 4 letters long. Return it as a hash in the format
