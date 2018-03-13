@@ -32,6 +32,24 @@
 
   ```
 
+Another mistake test is_a_2018_bank_holiday
+```ruby
+
+# exercise 
+def is_a_2018_bank_holiday?(date)
+end
+
+# but wrong year in method name (test)
+  it 'is_a_2018_bank_holiday?' do
+    a = is_a_2014_bank_holiday?(Time.new(2018, 8, 27))
+    b = is_a_2014_bank_holiday?(Time.new(2018, 8, 26))
+
+# is_a_2018_bank_holiday? ==! is_a_2014_bank_holiday?
+
+
+```
+
+
 * I used a lot **google**,  the **official documentation** and **stackoverflow** 
 
 

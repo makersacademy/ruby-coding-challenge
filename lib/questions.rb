@@ -241,7 +241,9 @@ def call_method_from_string(str_method)
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
-end
+    b_h_2018 = [Time.new(2018, 1, 1),Time.new(2018, 3, 30),Time.new(2018, 4, 2),Time.new(2018, 5, 7),Time.new(2018, 5, 28),Time.new(2018, 8, 27),Time.new(2018, 12, 25),Time.new(2018, 12, 26)]
+    b_h_2018.include?(date)
+   end
 
 # given your birthday this year, this method tells you
 # the next year when your birthday will fall on a friday
