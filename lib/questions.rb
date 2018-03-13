@@ -17,16 +17,20 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
-  if number > 0
-    number = number.to_s
-    return ('-' + number).to_i
+  if number > 0 # operates only on positive numbers
+    number = number.to_s # converts the integer into a string
+    return ('-' + number).to_i # adds the negative operator before the number in string form and converts them into an integer
      else
-        return number.to_i
+        return number.to_i # operates only on negative numbers making sure they're being returned as integers
   end
 end
 
 =begin
-
+A segment dedicated to arrays with a identity and codependency problems (Hashes)
+For this part I weaved in and out of https://ruby-doc.org/core-2.5.0/Hash.html
+& http://ruby-doc.org/core-2.5.0/Array.html as in somecases the problem looked more simplified when in array format
+while also having better control and manipulation.
+Secondary solutions have been hashed out
 =end
 
 # swap the keys and values in a hash. e.g.
@@ -48,32 +52,33 @@ Second solution just the long way of doing it.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
 sum = 0
-  a = hash.keys
-  b = hash.values
-  c = a + b
-  c.each do |i|
-  sum += i
+  a = hash.keys # returns all keys as an array
+  b = hash.values # returns all values as an array
+  c = a + b # adds both the arrays together creating one array from both
+  c.each do |i| # iterates through each element in the array
+  sum += i # adds to the accumulator
 end
-      return sum
+      return sum #  returns the accumulator (all the numbers added to each other)
 end
 
 # turn an array (with an even number of elements) into a hash, by
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
-  arr = array.each_slice(2).to_a
-  hash = arr.to_h
+  arr = array.each_slice(2).to_a # returns subarray starting at the start index and continuing for length of the array(pairing elements up where they are)
+  hash = arr.to_h # convert the array into a hash while they are paired
   return hash
 end
 
 =begin
-
+Strings not the kind who's length you query
+Strings section covered the manipulation of simple text and collection of data relating to it.
 =end
 
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
-   newStr = string.tr_s('A-Z','')
+   newStr = string.tr_s('A-Z','') # removes all capital letters in place on a string then replaces them with nothing
    return newStr
 end
 
@@ -81,9 +86,9 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
-  loke = (string.length).to_f/2
-  splitter = loke.ceil
-  string[0, splitter]
+  loke = (string.length).to_f/2 # turns the string length into a float so it can be rounded if not an even number when divided by 2 and then halves it
+  median = loke.ceil # rounds up the float and converts it to an integer
+return  string[0, median] # returns the original string from the first character until the count of the median
 end
 
 # convert a symbol into a string
@@ -94,11 +99,10 @@ end
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
-  commRem = email.gsub(/.com.*/, '')
-  commRem.length
-  arr = commRem.split('@').to_a
-  domain = arr.pop
-  return domain
+  comRem = email.gsub(/.com.*/, '') # removes the .com section from email and saves it as var comRem
+  arr = comRem.split('@') # splits the string at the @ symbol returning it as an array (example ['onboarding@','makersacademy']
+  domain = arr.pop # removes the first element of the array keeping the section after @
+  return domain # returns the section after @ (the domain name)
 end
 
 # capitalize the first letter in each word of a string,
@@ -107,14 +111,16 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-  skipIt = ['and', 'And', 'the', 'The',  'a', 'A']
-  string = string.downcase
-  arr = string.split
-  arr2 = arr.map { |word| skipIt.include?(word) ? word : word.capitalize }.join(' ')
+  skipIt = ['and', 'And', 'the', 'The',  'a', 'A'] # creates a var of the array of words upcase and downcase that need to be skipped
+  string = string.downcase #makes the whole string lower case
+  arr = string.split #turns the string into an array where each word is an element
+  arr2 = arr.map { |word| skipIt.include?(word) ? word : word.capitalize }
+# the above maps the array skipping the element if it includes any of the skipIt elements and capitalizes anything that doesn't match
+# then returns it as a string
 
-  reStrung = arr2.split(' ')[0].capitalize
-  nowTitle = arr2.split(' ')[1..-1].unshift(reStrung).join(' ')
-  finalTitle = nowTitle
+  reStrung = arr2[0].capitalize # takes the first element of the last array and makes that capital
+  finalTitle = arr2[1..-1].unshift(reStrung).join(' ') # takes all but the first element of the array
+  # then adds the capitalized version of the first element and rejoins it forming a string of all the elements
   return finalTitle
 end
 
@@ -122,87 +128,84 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
-  if /\W/.match(string)
+  if /\W/.match(string) # creates if statement where special charactes match the statement is satisfied and returns true
     return  true
-   else
+  else # if they don't match it returns false
     return false
   end
 end
 
 =begin
-
+Arrays...
+this is the segment I spent most of my time reading about as almost all the classes were far easier to manipulate having been converted to this format.
 =end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
-  newArr = array.select { |word| word.start_with?('a') }
-  return newArr
+  newArr = array.select { |word| word.start_with?('a') } # searches through each word in an array for a match with the arguement and selects it
+  return newArr # returns the selection
 end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-  #originaly used .start_with?(/[AEIOUaeiou]/) however undefined Regex error
-  #came up and have not managed to find an explanation as to why
-  vowlPlay =array.select { |word| word.start_with?('a','A','e','E','i','I','o','O','u','U') }
-  vowlPlay = vowlPlay.join(' ')
+  # originaly used .start_with?(/[AEIOUaeiou]/) however undefined Regex error
+  # came up and have not managed to find an explanation as to why
+  vowlPlay =array.select { |word| word.start_with?('a','A','e','E','i','I','o','O','u','U') } # see above exercise for explanation
+  vowlPlay = vowlPlay.join(' ') # takes the array and returns it as a string
   return vowlPlay
 end
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
-  clean = array.compact
+  clean = array.compact # removes all nil values
   return clean
 end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
-  clean = array.compact
- arr = clean.join(' ')
- arr = arr.split(' ').to_a
- arr.delete('false')
- newArr = arr.to_a
- return newArr
+  clean = array.compact # removes all nil from array
+  clean.delete(false) # removes all occurences of false
+  return clean
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
-  str = array.join(' ').reverse
-  arr = str.split(' ')
-  return arr.reverse
+  str = array.join(' ').reverse # turns the array into a string and reverses it
+  arr = str.split(' ') # turns the string thats been reversed into a new array
+  return arr.reverse # puts that array back into the order of the original array
 end
 
 # discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
-  arr = array.drop(3)
+  arr = array.drop(3) # removes the all elements until the element count in the arguement
   return arr
 end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
-  newArr = array.unshift(element)
+  newArr = array.unshift(element) # unshift puts elements on to the beggining of an array and its arguement is what you put there
   return newArr
 end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
-  shortStraw = array.min { |i, j| i.length <=> j.length }
+  shortStraw = array.min { |i, j| i.length <=> j.length } # iterates through and compares each word in an array and keeps only the minimum
   return shortStraw
 end
 
 # return the shortest word in an array
 def longest_word_in_array(array)
-  longErr = array.max { |i, j| i.length <=> j.length }
+  longErr = array.max { |i, j| i.length <=> j.length } # iterates through and compares each word in an array and keeps only the longest
   return longErr
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
-  sum = 0
-   arr = array
-   arr.each do |i|
+  sum = 0 # accumulator
+   array.each do |i| # iterates through each element in the array adding its value to the accumulator
    sum += i
  end
  return sum
@@ -215,10 +218,10 @@ def average_of_array(array)
   sum = 0
    arr = array
    arr.each do |i|
-   sum += i
+   sum += i # see above exercise for description
  end
- sum = sum.to_f
-  avArr = (sum/array.length).ceil
+ sum = sum.to_f # converts the accumulator into a float
+  avArr = (sum/array.length).ceil # takes the float divides it by the number of elements in the original array and rounds up
   return avArr
 end
 
@@ -227,7 +230,7 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
-  highFive =  array.take_while { |i| i < 6 }
+  highFive =  array.take_while { |i| i < 6 } # iterates through the array returning the number while its less than 6 stops if 6 or above
   return highFive
 end
 
@@ -236,8 +239,8 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
-  arr = array.join('')
-  arrNew = arr.split('').sort
+  arr = array.join('') # turns the array into a string with no spaces
+  arrNew = arr.split('').sort # turns the string into an array of each character then sorts it by value
 return arrNew
 end
 
@@ -253,31 +256,31 @@ Explanations given were along the lines of 'this works therefore it is' it shows
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
-  teaParty = date
-  rabbit = teaParty.strftime '%d/%m/%Y'
+  teaParty = date # stores date as a var to be called on
+  rabbit = teaParty.strftime '%d/%m/%Y' # formats the var into dd/mm/yyyy
 return rabbit
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
-  upLim = range.end
+  upLim = range.end # returns the last value in a range
   return upLim
 end
 
 # should return true for a 3 dot range like 1...20, false for a
 # normal 2 dot range
 def is_a_3_dot_range?(range)
-  if range.exclude_end?
+  if range.exclude_end? # a 3 dot range doesn't include the last number thereore if the range doesn't include its name the statement is satisfied so returns true
     return true
-  else
+  else # returns false if not satisfied
     return false
   end
 end
 
 # get the square root of a number
 def square_root_of(number)
-  sqarut = Math.sqrt(number)
+  sqarut = Math.sqrt(number) # operator that calculates the square root stored as a variable to be returned
   return sqarut
 end
 
@@ -287,7 +290,7 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
-meth = eval(str_method)
+meth = eval(str_method) # method that takes any string an evaluates it for a method that can be called
 return meth
 end
 
@@ -295,9 +298,9 @@ end
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
-bankHol = ['30-03-2018','02-04-2018','07-05-2018','28-05-2018','27-08-2018','25-12-2018','26-12-2018']
-date = date.strftime '%d-%m-%Y'
-return bankHol.include?(date)
+bankHol = ['30-03-2018','02-04-2018','07-05-2018','28-05-2018','27-08-2018','25-12-2018','26-12-2018'] # array of 2018 UK bank holidays stored as var to be compared against
+date = date.strftime '%d-%m-%Y' # formats date nicely
+return bankHol.include?(date) # returns true if inputed date matches any of the element in bankHol
 end
 
 # given your birthday this year, this method tells you
@@ -305,16 +308,16 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
-birthday = birthday.strftime("%A")
-until birthday.Friday? == true
-   year += 1
-end
-return
+#birthday = birthday.strftime("%A") #retrieve the day from the inputed birthday
+#until birthday.Friday? == true # 'until it was a friday again increase the count'
+#   year += 1
+#end
+#return
 end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
-  cLippy = IO.binread(file_path).split(/\s+/).length
+  cLippy = IO.binread(file_path).split(/\s+/).length # opens and reads file in 'file_path' then splits it at all by each word into an array and returns the length
   return cLippy
 end
 
@@ -325,11 +328,12 @@ end
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
 
-    wordOc = Hash.new(0)
-    IO.binread(file_path).downcase.scan(/\w+/) do |word|
-      wordOc[word] += 1
-    end
-  return  wordOc
+  wordOc = Hash.new(0) # creates a new empty hash
+  IO.binread(file_path).downcase.scan(/\w+/) do |word|
+  wordOc[word] += 1
+  end # populates the hash after reading the file, downcasing all the words so there are no caps versions in the keys
+    # then scans for occurences of each word creating a new key for each new word putting their occurence count as value
+return  wordOc
   #returns correct hash however not the length of the word as key rather the word.
   #have looked into solution and believe it may be along the lines of converting to array
   #then iterating through and converting each string into its .length value and rehashing
