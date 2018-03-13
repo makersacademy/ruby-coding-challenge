@@ -178,3 +178,13 @@ TODO come back to this
 * 
 
 **in a file, total the number of times words of different lengths appear**
+
+* Work out how to open file first
+* In irb
+```ruby
+Dir.chdir("data")
+text = File.open("lorem.txt")
+```
+* This provides a giant array of the sentence, no splits
+* Split into Words first
+* Then .sort, and sum?
