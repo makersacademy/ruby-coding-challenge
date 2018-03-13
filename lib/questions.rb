@@ -98,8 +98,9 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-  vowel = %w[a e i o u]
+  #vowel = %w[a e i o u]
   array.select {|i| i.start_with?("a", "e", "i", "o", "u")}.join(" ")
+  # array.select {|i| i.start_with?(/aeiou/)}.join(" ")
 end
 
 # remove instances of nil (but NOT false) from an array
@@ -165,7 +166,7 @@ def get_elements_until_greater_than_five(array)
 
 # array.take_while { |i| i < 6 }  
 
-  new_array = []
+new_array = []
 i = 0 
 while array[i] <= 5 do
   new_array.push(array[i])
@@ -215,6 +216,10 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+  # str_method.foobar << doesn't pass - breaks rspec
+  # foobar.call_method_from_string << undefined variable foobar
+
+  
 end
 
 # return true if the date is a uk bank holiday for 2014
@@ -228,6 +233,10 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+birthday_2018 = 'Sunday'
+# Sunday = 0 
+# Friday = 6 
+
 end
 
 # count the number of words in a file
