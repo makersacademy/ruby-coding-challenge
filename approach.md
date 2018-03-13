@@ -177,6 +177,17 @@ TODO come back to this
 * Test requests return as year number, i.e. 2020 date will be Friday
 * 
 
+**count the number of words in a file**
+* Work out how to open file first
+* In irb
+```ruby
+Dir.chdir("data")
+text = File.open("lorem.txt")
+```
+* This provides a giant array of the sentence, no splits
+* Need multi-dimensional array, split into words
+* count words
+
 **in a file, total the number of times words of different lengths appear**
 
 * Work out how to open file first
@@ -186,5 +197,7 @@ Dir.chdir("data")
 text = File.open("lorem.txt")
 ```
 * This provides a giant array of the sentence, no splits
-* Split into Words first
-* Then .sort, and sum?
+* Need multi-dimensional array, split into words
+* .sort by length
+* get count of each word
+* build hash of {lenth => count} from array
