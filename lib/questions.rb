@@ -1,3 +1,7 @@
+=begin
+This first section is relating to basic mathematical operators
+My only source here was https://ruby-doc.org/core-2.5.0/Numeric.html
+=end
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
@@ -20,6 +24,10 @@ def make_numbers_negative(number)
         return number.to_i
   end
 end
+
+=begin
+
+=end
 
 # swap the keys and values in a hash. e.g.
 # {'a' => 'b', 'c' => 'd'} becomes
@@ -58,11 +66,15 @@ def convert_array_to_a_hash(array)
   return hash
 end
 
+=begin
+
+=end
+
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
-   newS = string.tr_s('A-Z','')
-   return newS
+   newStr = string.tr_s('A-Z','')
+   return newStr
 end
 
 # cut strings in half, and return the first half, e.g.
@@ -117,6 +129,10 @@ def check_a_string_for_special_characters(string)
   end
 end
 
+=begin
+
+=end
+
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
   newArr = array.select { |word| word.start_with?('a') }
@@ -125,9 +141,11 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
-  vowel = /[aeiou]/
-  newArr = array.select { |word| word.start_with?(vowel) }
-  return newArr
+  #originaly used .start_with?(/[AEIOUaeiou]/) however undefined Regex error
+  #came up and have not managed to find an explanation as to why
+  vowlPlay =array.select { |word| word.start_with?('a','A','e','E','i','I','o','O','u','U') }
+  vowlPlay = vowlPlay.join(' ')
+  return vowlPlay
 end
 
 # remove instances of nil (but NOT false) from an array
@@ -225,12 +243,19 @@ end
 
 # BONUS SECTION
 
+=begin
+The thing I struggled here with the most are dates.
+There are so many different input formats and most places I looked at to understand the syntax were actually rather unclear and confusing.
+Much of my time here in the bonuses was spent trawling stackoverflow whre I found more often than not half formed answers.
+Explanations given were along the lines of 'this works therefore it is' it shows why its important when typing tests and solutions to put comments describing what is being done.
+=end
+
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
-  
-date = Date.strptime(date, "%d-%m-%Y").strftime('%d/%m/%Y').to_s
-return date
+  teaParty = date
+  rabbit = teaParty.strftime '%d/%m/%Y'
+return rabbit
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
@@ -262,14 +287,17 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
-
+meth = eval(str_method)
+return meth
 end
 
-# return true if the date is a uk bank holiday for 2014
+# return true if the date is a uk bank holiday for 2018
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2018_bank_holiday?(date)
-
+bankHol = ['30-03-2018','02-04-2018','07-05-2018','28-05-2018','27-08-2018','25-12-2018','26-12-2018']
+date = date.strftime '%d-%m-%Y'
+return bankHol.include?(date)
 end
 
 # given your birthday this year, this method tells you
@@ -277,15 +305,17 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
-
-
+birthday = birthday.strftime("%A")
+until birthday.Friday? == true
+   year += 1
+end
+return
 end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
-  wordCount = file_path{ |f|
-  f.chunk { |line| line.ord }.each { |ch, lines| p [ch.chr, lines.length] }}
-  return wordCount
+  cLippy = IO.binread(file_path).split(/\s+/).length
+  return cLippy
 end
 
 # in a file, total the number of times words of different lengths
@@ -295,4 +325,12 @@ end
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
 
+    wordOc = Hash.new(0)
+    IO.binread(file_path).downcase.scan(/\w+/) do |word|
+      wordOc[word] += 1
+    end
+  return  wordOc
+  #returns correct hash however not the length of the word as key rather the word.
+  #have looked into solution and believe it may be along the lines of converting to array
+  #then iterating through and converting each string into its .length value and rehashing
 end
