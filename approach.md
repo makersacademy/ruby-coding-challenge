@@ -1,11 +1,30 @@
 **General Approach**
 
-* Using irb for command line testing of each test
+* irb for command line testing of each test
+* repli.it for block and method testing
 * Checking questions_spec.rb for test requirements
 * Using the docs
 https://ruby-doc.org/core-2.5.0/Array.html
 https://ruby-doc.org/core-2.5.0/String.html
-* Remembered that ! has a big effect on methods
+https://ruby-doc.org/core-2.5.0/Range.html 
+* Codecademy for Ruby
+* Chris Pine's Learn to Program
+* Stackoverflow!
+* https://www.tutorialspoint.com/ruby/ruby_loops.htm
+* Re-evaluating code afterwards 
+
+**Q4. swap the keys and values in a hash.**
+* Googled swapping key:value pairs
+* https://ruby-doc.org/core-2.5.0/Hash.html#method-i-invert 
+
+**Q5.turn an array (with an even number of elements) into a hash**
+* Googled converting Array to Hash
+* Originally tried the simpler solution
+https://ruby-doc.org/core-2.5.0/Array.html#method-i-hash 
+But this fails the rspec test
+* https://ruby-doc.org/core-2.5.0/Array.html#method-i-flatten
+* Interesting read here
+https://stackoverflow.com/questions/28302482/hash-vs-to-h-are-they-the-same-and-if-so-which-is-better
 
 **Q6. Summing hash keys and values** 
 
@@ -18,8 +37,7 @@ https://ruby-doc.org/core-2.5.0/String.html
 * Search for String methods.   
 * Found the .scan() methods, using regex was easy to extract using .scan(/[a-z]/) but this returns a split array and removes the space too
 * Added in (/[a-z]|[ ]/).join 
- 
-** .delete looks a lot simpler! ** 
+* .delete looks a lot simpler!
 
 **Q8. Split strings in half**
 
@@ -30,6 +48,7 @@ https://ruby-doc.org/core-2.5.0/String.html
 **Q9. Symbol to String**
 
 * to_s ? 
+* Seems to simple but passes tests
 
 **Q10 Return domain name from email address**
 
@@ -63,10 +82,27 @@ This looks like the simplest solution I can find
 
 **remove instances of nil AND false from an array**
 https://stackoverflow.com/questions/252203/checking-if-a-variable-is-not-nil-and-not-zero-in-ruby
-* tried to use a similar solution to the above but it doesn't work how I though
+* tried to use a similar solution to the above but it doesn't work how I thought
 * Found way to check if variable is nil
 
 **discard the first 3 elements of an array**
 * This seemed to easy to be proper solution
 array[((array.length ) / 2)..-1]
 * I think it should still involve delete or push
+
+**get all the elements in an array, up until the first element which is greater than five**
+
+possible solution: 
+* create new empty array
+* iterate through current array
+* if < 6 then add to new array
+* stop after first one < how ?!
+
+Found the .take_while which appears to do a while loop over an array. 
+https://ruby-doc.org/core-2.5.0/Array.html#method-i-take
+Don't fully understand so worked on iterating the array
+
+**get all the letters used in an array of words and return it as a array of letters, in alphabetical order**
+* Practised a lot on repl.it
+* Tried doing array.each then .split but it splits the words into characters
+* Realised it needed to be one long words *before* splitting and sorting

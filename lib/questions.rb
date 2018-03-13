@@ -1,3 +1,5 @@
+# round up a float up and convert it to an Integer,
+# so 3.214 becomes 4
 def round_up_number(float)
   float.ceil.to_i
 end
@@ -8,13 +10,12 @@ def round_down_number(float)
   float.floor.to_i
 end
 
-
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
   if number < 0
       number.to_i
-  else number.to_i * -1
+  else number * -1
   end
 end
 
@@ -36,7 +37,10 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
-  Hash[*array.flatten]
+  # Hash[*array.flatten]
+  # Hash(array)
+  array.to_h
+
 end
 
 
@@ -158,6 +162,18 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+
+# array.take_while { |i| i < 6 }  
+
+  new_array = []
+i = 0 
+while array[i] <= 5 do
+  new_array.push(array[i])
+  i += 1 
+end
+
+new_array
+
 end
 
 # get all the letters used in an array of words and return
@@ -165,6 +181,7 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+  array.join.split('').sort
 end
 
 # BONUS SECTION
@@ -172,20 +189,24 @@ end
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
+  date.strftime("%d/%m/%Y")
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
+  range.max
 end
 
 # should return true for a 3 dot range like 1...20, false for a
 # normal 2 dot range
 def is_a_3_dot_range?(range)
+  range.exclude_end?
 end
 
 # get the square root of a number
 def square_root_of(number)
+  Math.sqrt(number)
 end
 
 # --- tougher ones ---
