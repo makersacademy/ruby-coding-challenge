@@ -188,16 +188,23 @@ text = File.open("lorem.txt")
 * Need multi-dimensional array, split into words
 * count words
 
-**in a file, total the number of times words of different lengths appear**
-
-* Work out how to open file first
-* In irb
 ```ruby
-Dir.chdir("data")
-text = File.open("lorem.txt")
+txt = File.read('text.txt')
+puts txt
+# print txt.split(' ').sort_by(&:length)
+print txt.split(' ').size
 ```
+* This works in repl.it but not rspec!
+
+**in a file, total the number of times words of different lengths appear**
+_similar solution to above_ 
+
 * This provides a giant array of the sentence, no splits
 * Need multi-dimensional array, split into words
 * .sort by length
 * get count of each word
-* build hash of {lenth => count} from array
+* build hash of {length => count} from array
+
+```ruby
+File.read('text.txt').split(' ').sort_by(&:length) # give an array of words by length
+```

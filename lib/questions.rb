@@ -241,6 +241,7 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+  File.read('data/lorem.txt').split(' ').size
 end
 
 
@@ -250,5 +251,5 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
-  File.open("file_path")
+  File.read('text.txt').split(' ').sort_by(&:length) # give an array of words by length
 end
