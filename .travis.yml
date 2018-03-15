@@ -1,4 +1,8 @@
-rvm: '2.4.0'
+rvm: '2.5.0'
 language: ruby
 script:
   bundle exec rspec
+notifications:
+    slack: makersacademy:tdRCm6lkIKMwzxXBaOh89Fh8
+    on_success: always
+    on_failure: never
