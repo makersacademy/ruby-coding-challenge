@@ -183,8 +183,8 @@ describe 'bonus questions' do
   end
 
   it 'is_a_2018_bank_holiday?' do
-    a = is_a_2014_bank_holiday?(Time.new(2018, 8, 27))
-    b = is_a_2014_bank_holiday?(Time.new(2018, 8, 26))
+    a = is_a_2018_bank_holiday?(Time.new(2018, 8, 27))
+    b = is_a_2018_bank_holiday?(Time.new(2018, 8, 26))
 
     expect(a).to be true
     expect(b).to be false
