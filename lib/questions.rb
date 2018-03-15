@@ -68,7 +68,7 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-string.captialize.
+
 end
 
 # return true if a string contains any special characters
@@ -88,10 +88,12 @@ end
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
+    array - [nil]
 end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
+    array - [nil, false]
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
@@ -119,11 +121,13 @@ end
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+    array.sum
 end
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
+#    array.sum/array.count
 end
 
 # get all the elements in an array, up until the first element
