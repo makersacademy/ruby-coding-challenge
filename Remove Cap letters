@@ -1,0 +1,3 @@
+def remove_capital_letters_from_string(string)
+	string.delete("A-Z")
+end

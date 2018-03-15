@@ -1,0 +1,4 @@
+def average_of_array(array)
+	a = array.sum / array.count.to_f
+	a.round
+end

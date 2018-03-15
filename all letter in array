@@ -1,0 +1,3 @@
+def get_all_letters_in_array_of_words(array)
+	array.join.downcase.chars.sort
+end

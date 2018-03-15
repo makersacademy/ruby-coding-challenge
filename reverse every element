@@ -1,0 +1,3 @@
+def reverse_every_element_in_array(array)
+	array.map {|x| x.reverse}
+end

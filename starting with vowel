@@ -1,0 +1,3 @@
+def select_elements_starting_with_vowel(array)
+	array.select{|a| a.to_s.downcase.start_with? "a","e","i","o","u"}
+end

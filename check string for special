@@ -1,0 +1,3 @@
+def check_a_string_for_special_characters(string)
+	string.match?(/[!"£$%^&*()-=_+`¬`\|,<.>/?;:'@#~[{]}/]/)
+end

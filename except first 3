@@ -1,0 +1,3 @@
+def all_elements_except_first_3(array)
+	array.drop(3)
+end
