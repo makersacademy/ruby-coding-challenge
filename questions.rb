@@ -45,7 +45,7 @@ end
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
- string.gsub(/A-Z/, '')
+ string.tr('A-Z', '')
 end
 
 
@@ -53,12 +53,14 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+  x = string.length
+  string = string[0...-(x/2)]
 end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+  symbol.to_s
 end
-
 
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
@@ -71,9 +73,14 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
-  unless string = 'a', 'and'
-    #string.capitalize
-  end
+  title = string.split.map { |word|
+    if word.length > 3
+      word.capitalize
+    else
+      word
+    end }
+    title[0] = title[0].capitalize
+    title.join(" ")
 end
 
 # return true if a string contains any special characters
