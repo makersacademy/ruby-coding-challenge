@@ -16,7 +16,8 @@ end
 def make_numbers_negative(number)
   if number > 0
     number * -1
-  else return
+  else 
+      number * 1
   end
 end
 
@@ -36,6 +37,7 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+    Hash[*array]
 end
 
 
@@ -104,10 +106,12 @@ end
 # discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+    array.drop(3)
 end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
+    array.insert(0,element)
 end
 
 # return the shortest word in an array
@@ -127,7 +131,7 @@ end
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
-#    array.sum/array.count
+#    
 end
 
 # get all the elements in an array, up until the first element
