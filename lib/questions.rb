@@ -91,6 +91,21 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+  word_separator = " "
+  words = string.split(word_separator)
+
+  exceptions = %w(a and the)
+
+  words.each_with_index do |word, index|
+    is_first_word = index == 0
+    is_excepted = exceptions.include? word
+
+    if (!is_excepted) or (is_excepted && is_first_word)
+      words[index] = word.capitalize
+    end
+  end
+
+  words.join(word_separator)
 end
 
 # return true if a string contains any special characters
