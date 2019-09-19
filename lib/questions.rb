@@ -199,6 +199,15 @@ end
 
 # return the shortest word in an array
 def longest_word_in_array(array)
+  longest_word_index = 0
+
+  array.each_with_index do |word, index|
+    if word.length > array[longest_word_index].length
+      longest_word_index = index
+    end
+  end
+
+  array[longest_word_index]
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
