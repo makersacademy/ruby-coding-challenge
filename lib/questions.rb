@@ -112,6 +112,15 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+  non_alphanumeric_filter = /\W/
+
+  string.each_char do |char|
+    if char =~ non_alphanumeric_filter
+      return true
+    end
+  end
+
+  false
 end
 
 # keep only the elements that start with an a
