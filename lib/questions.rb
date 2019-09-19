@@ -153,6 +153,7 @@ end
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
+  array.reject { |x| x == nil }
 end
 
 # remove instances of nil AND false from an array
