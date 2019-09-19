@@ -40,6 +40,16 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+  hash = Hash.new
+
+  for i in (0...array.length).step 2 do
+    key = array[i]
+    value = array[i + 1]
+
+    hash[key] = value
+  end
+
+  hash
 end
 
 
