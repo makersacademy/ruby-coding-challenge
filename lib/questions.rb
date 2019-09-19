@@ -125,6 +125,15 @@ end
 
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
+  clean_array = Array.new
+
+  array.each do |el|
+    if el[0] == "a"
+      clean_array.push el
+    end
+  end
+
+  clean_array
 end
 
 # keep only the elements that start with a vowel
