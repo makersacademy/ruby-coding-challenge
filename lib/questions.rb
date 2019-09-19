@@ -80,6 +80,9 @@ end
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  full_domain = email.partition("@").last
+
+  full_domain.partition(".").first
 end
 
 # capitalize the first letter in each word of a string,
