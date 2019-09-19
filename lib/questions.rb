@@ -66,6 +66,9 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+  halfway = round_up_number(string.length.to_f / 2)
+
+  string[0, halfway]
 end
 
 # convert a symbol into a string
