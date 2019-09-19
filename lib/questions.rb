@@ -138,6 +138,16 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
+  clean_array = Array.new
+  vowels = %w(a e i o u)
+
+  array.each do |el|
+    if vowels.include? el[0].downcase
+      clean_array.push el
+    end
+  end
+
+  clean_array.join(" ")
 end
 
 
