@@ -186,15 +186,7 @@ end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
-  shortest_word_index = 0
-
-  array.each_with_index do |word, index|
-    if word.length < array[shortest_word_index].length
-      shortest_word_index = index
-    end
-  end
-
-  array[shortest_word_index]
+  array.min_by(&:length)
 end
 
 # return the shortest word in an array
@@ -213,6 +205,7 @@ end
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+
 end
 
 # get the average from an array, rounded to the nearest integer
