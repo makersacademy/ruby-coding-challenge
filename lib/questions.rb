@@ -164,6 +164,13 @@ end
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
+  reversed_array = Array.new
+
+  array.each do |el|
+    reversed_array.push el.chars.reverse.join
+  end
+
+  reversed_array
 end
 
 # discard the first 3 elements of an array,
