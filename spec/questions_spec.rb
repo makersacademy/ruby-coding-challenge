@@ -192,7 +192,7 @@ describe 'bonus questions' do
 
   it 'your_birthday_is_on_a_friday_in_the_year' do
     n = your_birthday_is_on_a_friday_in_the_year(Time.new(2018, 1, 1))
-    expect(n).to eq 2020
+    expect(n).to eq 2021
   end
 
   it 'word_count_a_file' do

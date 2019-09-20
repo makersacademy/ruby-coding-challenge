@@ -304,6 +304,23 @@ end
 # e.g. january 1st, will next be a friday in 2016
 # return the day as a capitalized string like 'Friday'
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+  year = birthday.year + 1
+
+  year_found = nil
+
+  while year_found == nil do
+
+    future_birthday = Time.new(year, birthday.month, birthday.day)
+
+    if future_birthday.strftime("%A") == "Friday"
+      year_found = future_birthday.year
+    else
+      year += 1
+    end
+
+  end
+
+  year_found
 end
 
 # count the number of words in a file
