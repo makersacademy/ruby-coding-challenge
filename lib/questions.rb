@@ -324,4 +324,22 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+  word_lengths = Hash.new
+
+  # remove all non alphabetic and non spaces
+  f = File.read(file_path).gsub(/[^0-9a-z ]/i, '')
+
+  f.each_line do |line|
+
+    line.split(" ").each do |word|
+      if word_lengths.key? word.length
+        word_lengths[word.length] += 1
+      else
+        word_lengths[word.length] = 1
+      end
+    end
+
+  end
+
+  word_lengths
 end
