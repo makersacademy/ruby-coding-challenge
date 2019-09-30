@@ -63,8 +63,10 @@ describe 'learning strings' do
     end
 
     it 'get_domain_name_from_email_address' do
-      n = get_domain_name_from_email_address 'onboarding@makersacademy.com'
-      expect(n).to eq 'makersacademy'
+      first_example = get_domain_name_from_email_address 'onboarding@makersacademy.com'
+      expect(first_example).to eq 'makersacademy'
+      second_example = get_domain_name_from_email_address 'nobody@example.co.uk'
+      expect(second_example).to eq 'example'
     end
 
     it 'titleize_a_string' do
