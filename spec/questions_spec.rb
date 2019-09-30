@@ -191,8 +191,9 @@ describe 'bonus questions' do
   end
 
   it 'your_birthday_is_on_a_friday_in_the_year' do
-    n = your_birthday_is_on_a_friday_in_the_year(Time.new(2018, 1, 1))
-    expect(n).to eq 2020
+    current_year = Time.new.year
+    n = your_birthday_is_on_a_friday_in_the_year(Time.new(current_year, 1, 1))
+    expect(n).to eq current_year + 2
   end
 
   it 'word_count_a_file' do
