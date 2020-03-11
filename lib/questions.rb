@@ -29,7 +29,7 @@ end
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
     total = 0
-    
+
     hash.each do | key, value|
         total += key + value
     end
@@ -40,6 +40,14 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+    hash = {}
+    (0..array.length-1.step(2) do |itm|
+        key = array[itm]
+        value = array[itm + 1]
+    
+        hash[key] = value
+    end
+    hash
 end
 
 
