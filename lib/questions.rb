@@ -41,7 +41,7 @@ end
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
     hash = {}
-    (0..array.length-1.step(2) do |itm|
+    (0..array.length-1).step(2) do |itm|
         key = array[itm]
         value = array[itm + 1]
     
@@ -54,6 +54,7 @@ end
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+    string.gsub(/[[:upper:]]/, '')
 end
 
 
